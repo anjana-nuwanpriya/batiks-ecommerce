@@ -1,0 +1,728 @@
+// Tracking Page Styles - Brand Color Override
+:root {
+    --tracking-primary: $color-1;
+    --tracking-primary-rgb: 0, 102, 75;
+    --tracking-primary-light: rgba(0, 102, 75, 0.1);
+    --tracking-primary-border: rgba(0, 102, 75, 0.2);
+}
+
+.tracking-form {
+    .form-control:focus {
+        border-color: var(--tracking-primary);
+        box-shadow: 0 0 0 0.2rem rgba(var(--tracking-primary-rgb), 0.25);
+    }
+
+    @media (max-width: 768px) {
+        .btn {
+            margin-top: 1rem;
+        }
+    }
+}
+
+// Tracking Timeline Styles
+.tracking-timeline {
+    position: relative;
+
+    .timeline-item {
+        display: flex;
+        margin-bottom: 2rem;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.active {
+            .timeline-dot {
+                background-color: $color-1 !important;
+                box-shadow: 0 0 0 2px $color-1 !important;
+            }
+
+            .timeline-content h6 {
+                color: $color-1;
+            }
+        }
+    }
+
+    .timeline-marker {
+        position: relative;
+        margin-right: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            margin-right: 1rem;
+        }
+    }
+
+    .timeline-dot {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #e9ecef;
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 2px #e9ecef;
+        z-index: 2;
+        transition: all 0.3s ease;
+    }
+
+    .timeline-line {
+        width: 2px;
+        height: 40px;
+        background-color: #e9ecef;
+        margin-top: 8px;
+    }
+
+    .timeline-content {
+        flex: 1;
+        padding-top: 0;
+
+        h6 {
+            color: var(--bs-dark);
+            transition: color 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+// Loading Animation
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+
+    .timeline-dot {
+        animation: pulse 1.5s infinite;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+// Status Cards
+.status-card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+    }
+
+    .status-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+
+        &.primary {
+            background-color: var(--tracking-primary-light);
+            color: var(--tracking-primary);
+        }
+
+        &.success {
+            background-color: rgba(var(--bs-success-rgb), 0.1);
+            color: var(--bs-success);
+        }
+
+        &.warning {
+            background-color: rgba(var(--bs-warning-rgb), 0.1);
+            color: var(--bs-warning);
+        }
+
+        &.danger {
+            background-color: rgba(var(--bs-danger-rgb), 0.1);
+            color: var(--bs-danger);
+        }
+    }
+}
+
+// Responsive Improvements
+@media (max-width: 768px) {
+    .d-flex.gap-2.flex-wrap {
+        flex-direction: column;
+
+        .btn {
+            width: 100%;
+            margin-bottom: 0.5rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .card-body {
+        padding: 1.5rem !important;
+    }
+
+    .tracking-timeline .timeline-content {
+        .d-flex.justify-content-between {
+            flex-direction: column;
+            align-items: flex-start !important;
+
+            small {
+                margin-top: 0.25rem;
+            }
+        }
+    }
+}
+
+// Order Status Progress Bar (for existing order view)
+.order-status {
+    position: relative;
+
+    .status-line {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #e9ecef;
+        z-index: 1;
+
+        .active-line {
+            height: 100%;
+            background-color: var(--tracking-primary);
+            transition: width 0.5s ease;
+        }
+    }
+
+    .status-points {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+
+        .status-point {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            transition: all 0.3s ease;
+
+            &.completed {
+                background-color: var(--tracking-primary);
+                color: white;
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .status-points {
+            .status-point {
+                width: 32px;
+                height: 32px;
+
+                svg {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        .d-flex.justify-content-between.mt-2 {
+            small {
+                font-size: 0.7rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// Waybill Display
+.waybill-display {
+    background: linear-gradient(135deg, var(--tracking-primary-light), rgba(var(--tracking-primary-rgb), 0.05));
+    border: 1px solid var(--tracking-primary-border);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: var(--tracking-primary);
+    display: inline-block;
+
+    .waybill-label {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: var(--bs-secondary);
+        margin-right: 0.5rem;
+    }
+}
+
+// Quick Action Buttons
+.quick-actions {
+    .btn {
+        border-radius: 2rem;
+        padding: 0.5rem 1.5rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+// Help Section
+.help-section {
+    .help-item {
+        text-align: center;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: var(--tracking-primary-light);
+            transform: translateY(-2px);
+        }
+
+        .help-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            color: var(--tracking-primary);
+        }
+    }
+}
+
+// Enhanced Status Details
+.status-details {
+    .badge {
+        font-size: 0.75rem;
+        font-weight: 500;
+        border-radius: 0.5rem;
+
+        &.bg-primary {
+            background-color: var(--tracking-primary-light) !important;
+            color: var(--tracking-primary) !important;
+            border: 1px solid var(--tracking-primary-border);
+        }
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+
+        i {
+            width: 16px;
+            text-align: center;
+
+            &.text-danger {
+                color: #dc3545 !important;
+            }
+
+            &.text-info {
+                color: #0dcaf0 !important;
+            }
+
+            &.text-secondary {
+                color: #6c757d !important;
+            }
+        }
+    }
+}
+
+// Date/Time Styling
+.timeline-content {
+    .text-success {
+        .las {
+            color: var(--tracking-primary);
+        }
+    }
+
+    .text-primary {
+        color: $color-1;
+    }
+}
+
+// Current Status Card Enhancement
+.current-status-card {
+    background: linear-gradient(135deg, var(--tracking-primary-light), rgba(var(--tracking-primary-rgb), 0.02));
+    border: 1px solid var(--tracking-primary-border);
+
+    .status-text {
+        color: var(--tracking-primary);
+        font-weight: 700;
+    }
+
+    .status-branch {
+        .badge {
+            background-color: var(--tracking-primary-light) !important;
+            color: var(--tracking-primary) !important;
+            border: 1px solid var(--tracking-primary-border);
+        }
+    }
+}
+
+// Branch Name Badge Styling
+.badge.bg-primary.bg-opacity-10 {
+    background-color: var(--tracking-primary-light) !important;
+    color: var(--tracking-primary) !important;
+    border: 1px solid var(--tracking-primary-border);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+    .las {
+        color: var(--tracking-primary);
+        margin-right: 0.25rem;
+    }
+}
+
+// Enhanced Timeline Item Active State
+.timeline-item.active {
+    .timeline-content {
+        h6.text-primary {
+            color: var(--tracking-primary) !important;
+            text-shadow: 0 0 0.5rem rgba(var(--tracking-primary-rgb), 0.3);
+        }
+    }
+
+    .timeline-dot {
+        background-color: var(--tracking-primary) !important;
+        box-shadow: 0 0 0 2px var(--tracking-primary), 0 0 0 4px rgba(var(--tracking-primary-rgb), 0.2);
+        animation: pulse-primary 2s infinite;
+    }
+}
+
+@keyframes pulse-primary {
+    0% {
+        box-shadow: 0 0 0 2px var(--tracking-primary), 0 0 0 4px rgba(var(--tracking-primary-rgb), 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 0 2px var(--tracking-primary), 0 0 0 8px rgba(var(--tracking-primary-rgb), 0.1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 2px var(--tracking-primary), 0 0 0 4px rgba(var(--tracking-primary-rgb), 0.2);
+    }
+}
+
+// Responsive enhancements for status details
+@media (max-width: 768px) {
+    .status-details {
+        .badge {
+            font-size: 0.7rem;
+            padding: 0.4rem 0.8rem;
+        }
+
+        p {
+            font-size: 0.85rem;
+        }
+    }
+
+    .timeline-content {
+        .d-flex.justify-content-between {
+            .text-end {
+                text-align: left !important;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+
+// Tracking Form Submit Button
+.tracking-form .btn-primary {
+    background: $color-1;
+    border: none !important;
+    padding: 0.5rem 2rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: linear-gradient(135deg, #004d38, #003d2b) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(var(--tracking-primary-rgb), 0.4);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// Order History Track Buttons
+.btn-sm.btn-primary {
+    background-color: $color-1;
+    border-color:  $color-1;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+
+    &:hover {
+        background-color: #004d38 !important;
+        border-color: #004d38 !important;
+    }
+}
+
+// Refresh Button Styling
+button[data-action="refresh-tracking"] {
+    color: var(--tracking-primary) !important;
+    border-color: var(--tracking-primary) !important;
+
+    &:hover {
+        background-color: var(--tracking-primary) !important;
+        color: white !important;
+    }
+
+    .las.la-sync-alt {
+        transition: transform 0.3s ease;
+    }
+
+    &:hover .las.la-sync-alt {
+        transform: rotate(180deg);
+    }
+}
+
+// Quick Access Buttons
+.quick-actions .btn-outline-primary,
+.quick-actions .btn-primary {
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &.btn-primary {
+        background-color: var(--tracking-primary) !important;
+        border-color: var(--tracking-primary) !important;
+    }
+
+    &.btn-outline-primary {
+        color: var(--tracking-primary) !important;
+        border-color: var(--tracking-primary) !important;
+
+        &:hover {
+            background-color: var(--tracking-primary) !important;
+            color: white !important;
+        }
+    }
+}
+
+// Contact Support Button
+.btn[href*="contact"] {
+    background-color: var(--tracking-primary) !important;
+    border-color: var(--tracking-primary) !important;
+
+    &:hover {
+        background-color: #004d38 !important;
+        border-color: #004d38 !important;
+    }
+}
+
+// Loading State for Buttons
+.btn-primary.loading {
+    background-color: rgba(var(--tracking-primary-rgb), 0.7) !important;
+    pointer-events: none;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        margin-left: 0.5rem;
+        border: 2px solid transparent;
+        border-top: 2px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// Mobile Button Adjustments
+@media (max-width: 768px) {
+
+    .btn-primary,
+    .btn-outline-primary {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+        margin-bottom: 0.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .tracking-form .btn-primary {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+// Global Button Override for Tracking Pages
+body[class*="tracking"],
+.tracking-page,
+.page-tracking {
+    .btn-primary {
+        --bs-btn-bg: var(--tracking-primary) !important;
+        --bs-btn-border-color: var(--tracking-primary) !important;
+        --bs-btn-hover-bg: #004d38 !important;
+        --bs-btn-hover-border-color: #004d38 !important;
+        --bs-btn-focus-shadow-rgb: var(--tracking-primary-rgb) !important;
+        --bs-btn-active-bg: #004d38 !important;
+        --bs-btn-active-border-color: #004d38 !important;
+    }
+
+    .btn-outline-primary {
+        --bs-btn-color: var(--tracking-primary) !important;
+        --bs-btn-border-color: var(--tracking-primary) !important;
+        --bs-btn-hover-bg: var(--tracking-primary) !important;
+        --bs-btn-hover-border-color: var(--tracking-primary) !important;
+        --bs-btn-focus-shadow-rgb: var(--tracking-primary-rgb) !important;
+        --bs-btn-active-bg: var(--tracking-primary) !important;
+        --bs-btn-active-border-color: var(--tracking-primary) !important;
+    }
+}
+
+// Specific Page Targeting
+[data-page="tracking"],
+.frontend-tracking-index,
+.frontend-tracking-show {
+    .btn-primary {
+        background-color: var(--tracking-primary) !important;
+        border-color: var(--tracking-primary) !important;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: #004d38 !important;
+            border-color: #004d38 !important;
+        }
+    }
+
+    .btn-outline-primary {
+        color: var(--tracking-primary) !important;
+        border-color: var(--tracking-primary) !important;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--tracking-primary) !important;
+            border-color: var(--tracking-primary) !important;
+            color: white !important;
+        }
+    }
+}
+
+// Order History Page Button Override
+.frontend-customer-order-history {
+    .btn-primary {
+        background-color: var(--tracking-primary) !important;
+        border-color: var(--tracking-primary) !important;
+
+        &:hover {
+            background-color: #004d38 !important;
+            border-color: #004d38 !important;
+        }
+    }
+}
+
+// Order Details Page Button Override
+.frontend-customer-order {
+    .btn-primary {
+        background-color: var(--tracking-primary) !important;
+        border-color: var(--tracking-primary) !important;
+
+        &:hover {
+            background-color: #004d38 !important;
+            border-color: #004d38 !important;
+        }
+    }
+}
+
+// Navigation Track Order Button
+.navbar .nav-link[href*="track-order"],
+.mobile-nav .mobile-nav__link[href*="track-order"] {
+    color: var(--tracking-primary) !important;
+
+    &:hover {
+        color: #004d38 !important;
+    }
+
+    &.active {
+        color: var(--tracking-primary) !important;
+        font-weight: 600;
+    }
+}
+
+// Enhanced Button Animations
+.btn-primary,
+.btn-outline-primary {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+    }
+
+    &:hover::before {
+        left: 100%;
+    }
+}
+
+// Button Focus States
+.btn:focus {
+    outline: 2px solid var(--tracking-primary) !important;
+    outline-offset: 2px;
+}
+
+// Print Styles
+@media print {
+
+    .btn-primary,
+    .btn-outline-primary {
+        background-color: var(--tracking-primary) !important;
+        color: white !important;
+        border: 1px solid var(--tracking-primary) !important;
+    }
+}

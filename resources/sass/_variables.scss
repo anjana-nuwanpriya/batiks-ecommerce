@@ -1,0 +1,37 @@
+// Body
+// $body-bg: #f8fafc;
+$color-1: #008c68;
+$color-1-light: #33a882;
+$color-1-dark: #00664b;
+$color-1-complementary: #8c0034;
+$color-1-analogous-light: #008c88;
+$color-1-analogous-dark: #004c8c;
+$color-1-triadic-1: #8c6800;
+$color-1-triadic-2: #68008c;
+$color-1-neutral-light: #e6f2ef;
+$color-1-neutral-dark: #1a4036;
+
+$color-1-shadow: darken($color-1, 30%); // #005e45
+$color-1-shadow-transparent: rgba(0, 140, 104, 0.5); // Semi-transparent green shadow
+$color-1-shadow-neutral: rgba(26, 64, 54, 0.6); // Neutral dark green-gray
+$color-1-shadow-complementary: rgba(140, 0, 52, 0.3); // Soft magenta shadow
+$color-1-shadow-light: lighten($color-1, 20%); // #33a882
+
+$color-1-hover-light: lighten($color-1, 15%); // #33a882
+$color-1-hover-dark: darken($color-1, 15%); // #00664b
+$color-1-hover-saturated: saturate($color-1, 20%); // #009975
+$color-1-hover-desaturated: desaturate($color-1, 20%); // #007d60
+$color-1-hover-complementary: #8c0034; // Deep magenta
+$color-1-hover-analogous: #004c8c; // Deep teal blue
+
+
+$text-color: #212529bf;
+$text-color-light: #999999;
+$text-muted: #666666;
+$color-2: #191919;
+$border-color: #808080;
+
+// Typography
+$font-family-sans-serif: 'Inter', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;

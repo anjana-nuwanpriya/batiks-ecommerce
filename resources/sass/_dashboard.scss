@@ -1,0 +1,331 @@
+// Variables for consistent styling
+$primary-color: #28a745;
+$secondary-color: #f8f9fa;
+$text-color: #666666;
+$light-gray: #e9ecef;
+
+.sidebar {
+    border: 1px solid #E6E6E6;
+    background-color: white;
+    border-radius: 8px;
+    height: 100%;
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        color: $text-color;
+        padding: 10px 15px;
+        margin-bottom: 5px;
+        // border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+
+        i {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #CCCCCC;
+        }
+
+        &:hover {
+            background-color: #EDF2EE;
+            color: $primary-color;
+        }
+
+        &.active {
+            background-color: #EDF2EE;
+            color: black;
+
+            i {
+                color: black;
+            }
+        }
+    }
+}
+
+// Main Content Styling
+.main-content {
+    padding: 30px;
+    border: 1px solid #E6E6E6;
+    border-radius: 8px;
+
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+
+            .card-body {
+                padding: 20px;
+            }
+
+            h5 {
+                font-weight: 600;
+            }
+
+            .btn-outline-primary {
+                border-color: $color-1;
+                color: $color-1;
+                &:hover {
+                    background: $color-1;
+                    color: white;
+                }
+            }
+
+            .table-responsive {
+                overflow-x: auto;
+            }
+
+            .table th, .table td {
+                padding: 10px;
+                text-align: left;
+            }
+
+            .badge {
+                font-size: 0.9rem;
+                padding: 5px 10px;
+            }
+        }
+
+        .float-end {
+            font-weight: bold;
+            color: $color-1;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+}
+
+// Table Styling for Order History
+.order-history {
+    margin-top: 20px;
+
+    h5 {
+        margin-bottom: 15px;
+        color: $text-color;
+        font-weight: bold;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+
+        thead {
+            background-color: $primary-color;
+            color: #fff;
+
+            th {
+                padding: 15px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+
+        tbody {
+            tr {
+                &:hover {
+                    background-color: $light-gray;
+                }
+
+                td {
+                    padding: 15px;
+                    border-bottom: 1px solid $light-gray;
+
+                    &:last-child {
+                        text-align: center;
+
+                        a {
+                            font-size: 14px;
+                            padding: 5px 10px;
+                            border-radius: 5px;
+                            color: #fff;
+                            background-color: $primary-color;
+                            text-decoration: none;
+                            transition: all 0.3s;
+
+                            &:hover {
+                                background-color: darken($primary-color, 10%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+// Mobile Responsiveness
+@media (max-width: 768px) {
+    .sidebar {
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .profile-section {
+        .profile-header {
+            flex-direction: column;
+            text-align: center;
+
+            img {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    table {
+        font-size: 14px;
+
+        td,
+        th {
+            padding: 10px;
+        }
+    }
+}
+
+
+// _variables.scss
+$primary-color: #28a745;
+$secondary-color: #e0e0e0;
+$text-muted: #6c757d;
+$white: #fff;
+$light-bg: #f8f9fa;
+$border-radius: 8px;
+$transition-duration: 0.3s;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+
+// Font sizes
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.25rem;
+
+// _mixins.scss
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin status-point($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  @include flex-center;
+}
+
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// _order-status.scss
+.order-status {
+  position: relative;
+  padding-top: $spacing-lg;
+
+  .status-line {
+    height: 2px;
+    background: $secondary-color;
+    position: relative;
+    margin: $spacing-md 0;
+  }
+
+  .status-points {
+    @include flex-between;
+    position: relative;
+    margin-top: -40px;
+
+    .status-point {
+      @include status-point(30px);
+      background: $white;
+      border: 2px solid $secondary-color;
+
+      &.active {
+        border-color: $primary-color;
+        background: $primary-color;
+        color: $white;
+      }
+
+      &.completed {
+        @extend .active;
+        &::after {
+          content: '✓';
+        }
+      }
+
+      @include responsive($breakpoint-md) {
+        @include status-point(25px);
+        font-size: $font-size-sm;
+      }
+    }
+  }
+}
+
+// _address.scss
+.address-box {
+  background: $light-bg;
+  padding: $spacing-md;
+  border-radius: $border-radius;
+  margin-bottom: $spacing-md;
+
+  h6 {
+    color: $text-muted;
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    margin-bottom: $spacing-xs;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// _products.scss
+.product-table {
+  .product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: $border-radius;
+  }
+
+  .table {
+    th {
+      background: $light-bg;
+      font-weight: 600;
+    }
+
+    td {
+      vertical-align: middle;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+
+$separator-color: #dee2e6;
+$text-muted-color: #6c757d;
+$primary-color: #ffffff;
+$secondary-color: #f5f5f5;
+$text-muted-color: #6c757d;
+$separator-color: #e0e0e0;
+
+// Variables for colors
+$facebook-color: #1877f2; // Facebook blue
+$facebook-hover: #145dbf;
+$google-color: #ffffff; // Google white
+$google-hover: #f1f1f1;
+$text-dark: #444444; // Dark text for Google button
+$border-color: #dddddd; // Light border color for Google button
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+.login-wrapper {
+    min-height: calc(100vh - 15rem);
+    display: flex;
+    align-items: center;
+    background-color:#008c682e;
+    padding: 2rem 0;
+
+    .login-card{
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        padding: 2rem;
+        background-color: white;
+
+        .login-subtitle{
+            font-size: 0.9rem;
+        }
+    }
+
+    .form-group{
+        input{
+            border-radius: 0;
+            &:focus{
+                border-color: $color-1;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .login-separator {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        color: $text-muted-color;
+
+        span {
+            background: $primary-color;
+            padding: 0 15px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: $separator-color;
+        }
+    }
+
+    // Social Button Styling
+    .login-social {
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 8px;
+            padding: 10px;
+            text-decoration: none;
+            box-shadow: 0 2px 4px $shadow-color;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            width: 100%;
+
+            i {
+                font-size: 20px;
+            }
+
+            &:hover {
+                box-shadow: 0 4px 8px $shadow-color;
+            }
+        }
+
+        .btn-facebook {
+            background-color: $facebook-color;
+            color: #ffffff;
+            border: none;
+
+            &:hover {
+                background-color: $facebook-hover;
+            }
+        }
+
+        .btn-google {
+            background-color: $google-color;
+            color: $text-dark;
+            border: 1px solid $border-color;
+
+            &:hover {
+                background-color: $google-hover;
+            }
+        }
+    }
+
+    .nav-tabs{
+        border: none;
+        gap: 1rem;
+        .nav-item{
+            flex: 1;
+
+            .nav-link{
+                border-radius: 5px;
+                border-color: $color-1;
+                color: $color-1;
+                width: 100%;
+                text-align: center;
+
+                &.active{
+                    background-color: $color-1;
+                    color: white;
+                }
+            }
+        }
+    }
+}

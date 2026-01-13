@@ -1,0 +1,578 @@
+*{
+    font-family: $font-family-sans-serif;
+}
+
+html{
+    body{
+        scroll-behavior: smooth;
+    }
+}
+
+.lab,.las{
+    font-size: 1.3rem;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        color: $color-1;
+    }
+}
+
+
+.font-12 { font-size: 12px;}
+.font-13 { font-size: 13px;}
+.font-14 { font-size: 14px;}
+.font-15 { font-size: 15px;}
+.font-16 { font-size: 16px;}
+.font-17 { font-size: 17px;}
+.font-18 {font-size: 18px;}
+.font-19 {font-size: 19px;}
+.font-20 {font-size: 20px;}
+.font-21 {font-size: 21px;}
+.font-22 {font-size: 22px;}
+.font-23 {font-size: 23px;}
+.font-25 {font-size: 25px;}
+
+.z-index-1{ z-index: 1;}
+.z-index-2 { z-index: 2; }
+.z-index-3 { z-index: 3; }
+.z-index-4 { z-index: 4; }
+.z-index-5 { z-index: 5; }
+.z-index-6 { z-index: 6; }
+.z-index-7 { z-index: 7; }
+.z-index-8 { z-index: 8; }
+.z-index-9 { z-index: 9; }
+.z-index-10 { z-index: 10; }
+
+.section-p-tb{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-p-t{
+    padding-top: 100px;
+}
+
+.section-p-b{
+    padding-bottom: 100px;
+}
+
+/**
+Product Card */
+
+.product-wrapper {
+    background: #fff;
+    border-radius: 12px;
+    position: relative;
+    padding: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    border: 2px solid transparent;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        border-color: #2e8555;
+
+        .product-wrapper__action--other {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__img {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 12px;
+        background: #f8f8f8;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: scale-down;
+            aspect-ratio: 1/1;
+            transition: transform 0.3s ease;
+        }
+
+        // &:hover img {
+        //     transform: scale(1.1);
+        // }
+    }
+
+    &__content {
+        padding: 8px 4px;
+
+        &--title {
+            min-height: 50px;
+        }
+
+        h5, h6 {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            /* Your existing styles */
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        h5 {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        h6 {
+            font-size: 14px;
+        }
+
+    }
+
+    .rating-st {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+
+        i {
+            color: #e5e5e5;
+            font-size: 16px;
+            margin-right: 2px;
+
+            &.active{
+                color: gold;
+            }
+        }
+
+        span {
+            color: #666;
+            font-size: 14px;
+            margin-left: 6px;
+        }
+    }
+
+    &__badge{
+        position: absolute;
+        top: 12px;
+        right: auto;
+        left: 12px;
+        background-color: #EA4B48;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 600;
+        z-index: 1;
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h6 {
+            font-size: 18px;
+            font-weight: 600;
+            color: $color-1;
+            margin: 0;
+        }
+
+        .cart-btn {
+            background-color: $color-1;
+            color: white;
+            border: none;
+            border-radius: 100%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: $color-1-hover-dark;
+            }
+
+            i {
+                font-size: 20px;
+            }
+        }
+
+        &--other {
+            position: absolute;
+            top: 12px;
+            left: auto;
+            right: 12px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+
+            .wishlist-btn {
+                background: transparent;
+                background-color: white;
+                border: 1px solid #F2F2F2;
+                border-radius: 100%;
+                width: 36px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+
+                &.active {
+                    color: #EA4B48;
+
+                    i{
+                        font-weight: 600;
+                    }
+                }
+
+                &:hover {
+                    color: #EA4B48;
+
+                    i{
+                        font-weight: 600;
+                    }
+                }
+
+                i {
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+
+            .quick-view-btn {
+                background: transparent;
+                background-color: white;
+                border: 1px solid #F2F2F2;
+                color: black;
+                border-radius: 100%;
+                width: 36px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: white;
+                    background-color: $color-1;
+                }
+
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+/**
+Section Header */
+
+.section-header {
+    // max-width: 800px;
+    // margin: 0 auto;
+    // padding: 40px 20px;
+
+    &__subtitle {
+        color: #008c68;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 10px;
+        display: block;
+
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: 600;
+        color: black;
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+
+    &__subdesc {
+        font-size: 16px;
+        color: darkslategray;
+        line-height: 1.6;
+        max-width: 600px;
+
+    }
+}
+
+/**
+Commmon button */
+.btn-style-1{
+    background: $color-1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover{
+        background-color: $color-1-hover-dark;
+        color: white;
+    }
+}
+
+
+/**
+Pagebanner */
+.page-banner{
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+
+    @media (max-width: 768px) {
+        padding: 20px 0;
+        font-size: 12px;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0,0,0,0.9024859943977591) 0%, rgba(255,255,255,0) 100%);
+    }
+
+    &__breadcrumb{
+        position: relative;
+        z-index: 1;
+    }
+
+    &__breadcrumb-link{
+        color: white;
+        transition: all 0.3s ease;
+
+        &:hover{
+            color: $color-1;
+        }
+    }
+
+    .breadcrumb-item.active{
+        color: $color-1;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before{
+        color: white;
+    }
+}
+
+
+.swiper-container {
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+.swiper-thumbs {
+    width: 20%;
+    height: 500px;
+}
+.swiper-main {
+    width: 80%;
+    height: 500px;
+}
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/**
+Button */
+.btn-1{
+    color: $color-1;
+}
+
+
+/**
+Button Loading */
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 14px;
+        width: 14px;
+        border: 1px solid #ffffff;
+        border-radius: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.btn:disabled{
+    background-color: $color-1 !important;
+}
+
+.form-control, .form-select{
+    height: 40px;
+    border-radius: 5px;
+}
+textarea{
+    height: auto !important;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border-color: $color-1;
+}
+
+.form-select{
+    &:focus{
+        box-shadow: none;
+        border-color: $color-1;
+    }
+}
+
+.iti{
+    width: 100% !important;
+}
+
+
+.form-check-input:checked{
+    background-color: $color-1 !important;
+    border-color: $color-1 !important;
+}
+
+.form-check-input:focus{
+    box-shadow: none !important;
+}
+
+
+/**
+Pagination */
+.pagination{
+    .page-item{
+        .page-link{
+            color: $color-1;
+            border-color: $color-1;
+            background-color: white;
+
+            &:hover{
+                background-color: $color-1;
+                color: white;
+            }
+        }
+
+        &.active{
+            .page-link{
+                background-color: $color-1;
+                color: white;
+            }
+        }
+
+        &.disabled{
+            .page-link{
+                background-color: #e9ecef;
+                color: #6c757d;
+            }
+        }
+    }
+}
+
+
+/**
+Floating WhatsApp Icon */
+
+.floating-whatsapp {
+    position: fixed;
+    bottom: 90px;
+    right: 25px;
+    z-index: 999;
+
+    @media (max-width: 767px) {
+        bottom: 75px;
+        right: 15px;
+    }
+}
+
+.whatsapp-icon {
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 35px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    animation: pulse 1.5s infinite;
+
+    i{
+        font-size: 35px;
+    }
+
+    &:hover {
+        color: #fff;
+        transform: scale(1.1);
+    }
+
+    @media (max-width: 767px) {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+}
+
+#google_translate_element {
+    display: none;
+}
+
+.skiptranslate iframe{
+    position: static !important;
+}

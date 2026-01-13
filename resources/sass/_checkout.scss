@@ -1,0 +1,619 @@
+// Order Complete & Checkout Styles
+.order-complete-section {
+    background: #f8f9fa;
+    min-height: 80vh;
+    padding: 2rem 0;
+}
+
+// Invoice Card Styles
+.invoice-card {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+
+    .invoice-body {
+        padding: 2rem;
+    }
+}
+
+// Invoice Section Titles
+.invoice-section-title {
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+// Invoice Info Sections
+.invoice-info {
+    .fw-bold {
+        color: #2c3e50;
+        margin-bottom: 0.25rem;
+    }
+
+    .text-muted {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .d-flex {
+        margin-bottom: 0.25rem;
+        font-size: 0.9rem;
+    }
+}
+
+// Items Table
+.items-table {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .items-header {
+        background: #f8f9fa;
+        padding: 1rem;
+        border-bottom: 1px solid #e9ecef;
+        font-weight: 600;
+        color: #495057;
+        font-size: 0.9rem;
+    }
+
+    .items-body {
+        .item-row {
+            padding: 1rem;
+            border-bottom: 1px solid #f1f3f4;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .item-icon {
+                width: 40px;
+                height: 40px;
+                background: #e8f5e8;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .fw-bold {
+                color: #2c3e50;
+                font-size: 0.95rem;
+            }
+
+            small {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+// Order Totals
+.order-totals {
+    .totals-section {
+        .total-line {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f3f4;
+            font-size: 0.9rem;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &.total-amount {
+                border-top: 2px solid #e9ecef;
+                padding-top: 1rem;
+                margin-top: 0.5rem;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+// Payment Instructions
+.payment-instructions {
+    background: #e8f5e8;
+    border: 1px solid #c3e6c3;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+
+    .payment-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        color: #2c3e50;
+        font-size: 1.1rem;
+
+        i {
+            color: #28a745;
+            font-size: 1.3rem;
+        }
+    }
+
+    .payment-section-title {
+        color: #495057;
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .bank-details, .payment-details {
+        .bank-detail-item, .payment-detail-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .detail-label {
+                color: #6c757d;
+                font-weight: 500;
+            }
+
+            .detail-value {
+                color: #2c3e50;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+    }
+
+    .copy-icon {
+        background: rgba(40, 167, 69, 0.1);
+        border: 1px solid rgba(40, 167, 69, 0.3);
+        color: #28a745;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: rgba(40, 167, 69, 0.2);
+            color: #1e7e34;
+        }
+    }
+
+    .payment-instructions-note {
+        background: #fff3cd;
+        border: 1px solid #ffeaa7;
+        border-radius: 6px;
+        padding: 1rem;
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+
+        .instruction-icon {
+            color: #856404;
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .instruction-content {
+            flex: 1;
+            color: #856404;
+
+            .fw-bold {
+                color: #856404;
+            }
+
+            .instruction-list {
+                margin: 0;
+                padding-left: 1.2rem;
+                font-size: 0.9rem;
+
+                li {
+                    margin-bottom: 0.5rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Status Badge Updates
+.status-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &.status-pending {
+        background: #fff3cd;
+        color: #856404;
+    }
+
+    &.status-paid {
+        background: #d4edda;
+        color: #155724;
+    }
+}
+
+// Order Summary Table
+.order-summary-table {
+    background: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+
+    th {
+        background: #e9ecef;
+        border: none;
+        font-weight: 600;
+        padding: 1rem;
+    }
+
+    td {
+        border: none;
+        padding: 0.75rem 1rem;
+        vertical-align: middle;
+    }
+}
+
+.total-row {
+    background: #fff3cd;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+// Bank Information Card
+.bank-info-card {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+    color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.bank-info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.copy-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.3);
+        color: white;
+    }
+}
+
+// Action Buttons
+.action-buttons {
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-custom {
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    border: none;
+    color: white;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+        color: white;
+    }
+}
+
+.btn-success-custom {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    border: none;
+    color: white;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+        color: white;
+    }
+}
+
+.btn-outline-custom {
+    border: 2px solid #6c757d;
+    color: #6c757d;
+    background: transparent;
+
+    &:hover {
+        background: #6c757d;
+        color: white;
+        transform: translateY(-2px);
+    }
+}
+
+// Status Badges
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &.status-pending {
+        background: #fff3cd;
+        color: #856404;
+    }
+
+    &.status-paid {
+        background: #d4edda;
+        color: #155724;
+    }
+}
+
+// Print Button
+.print-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 1);
+        transform: scale(1.1);
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .invoice-card {
+        .invoice-header {
+            padding: 1.5rem 1rem;
+        }
+
+        .invoice-body {
+            padding: 1.5rem 1rem;
+        }
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-custom {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+
+    .order-summary-table {
+        font-size: 0.9rem;
+    }
+
+    .bank-info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+// Print Styles
+@media print {
+    .print-btn,
+    .action-buttons,
+    .no-print {
+        display: none !important;
+    }
+
+    .invoice-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .order-complete-section {
+        background: white !important;
+    }
+
+    .invoice-header {
+        background: #28a745 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .bank-info-card {
+        background: #17a2b8 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+// Toast Notification (for copy functionality)
+.toast-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    z-index: 9999;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+// Additional Checkout Page Styles (if needed)
+.checkout-section {
+    .checkout-form {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+
+        .form-group {
+            margin-bottom: 1.5rem;
+
+            label {
+                font-weight: 600;
+                color: #495057;
+                margin-bottom: 0.5rem;
+            }
+
+            .form-control {
+                border-radius: 8px;
+                border: 2px solid #e9ecef;
+                padding: 0.75rem 1rem;
+                transition: all 0.3s ease;
+
+                &:focus {
+                    border-color: #28a745;
+                    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+                }
+            }
+        }
+    }
+
+    .address-card {
+        cursor: pointer;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        position: relative;
+
+        &:hover {
+            border-color: $color-1;
+        }
+
+        .card-body{
+            padding: 1rem;
+            background-color: transparent;
+        }
+
+        input[type="radio"] {
+            display: none;
+
+            &:checked + label {
+                .card {
+                    border: 1px solid $color-1;
+                    background-color: #e8ffe842;
+                }
+            }
+
+        }
+
+        .card-action{
+            padding: 1rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            .btn{
+                background-color: transparent;
+                border: 1px solid $color-1;
+                font-size: 0.8rem;
+                background-color: white;
+
+                &:hover{
+                    background-color: $color-1;
+                }
+            }
+
+        }
+
+        .selected-address-badge{
+            color: $color-1;
+            background-color: #008c6830;
+            font-size: 0.8rem;
+            border-radius: 50px;
+            padding: 0.2rem 0.5rem;
+        }
+
+        label {
+            width: 100%;
+            margin: 0;
+
+            p{
+                font-size: 0.9rem;
+                color: #333;
+            }
+        }
+    }
+
+
+    .order-summary {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 1.5rem;
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #dee2e6;
+
+            &:last-child {
+                border-bottom: none;
+                font-weight: bold;
+                font-size: 1.1rem;
+                color: #28a745;
+            }
+        }
+    }
+}
