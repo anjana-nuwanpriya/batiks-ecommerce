@@ -1,6 +1,27 @@
+// 👑 LUXURY BATIK COLOR PALETTE
+$color-charcoal: #1C1C1C;
+$color-ivory: #FAF7F2;
+$color-gold: #D4AF37;
+$color-maroon: #5A1A1A;
+$color-dark-maroon: #3B0F0F;
+
+// Legacy variable mappings for compatibility
+$color-1: $color-gold;
+$color-2: $color-charcoal;
+
+// Theme variables
+$border-color: #E6E6E6;
+$text-color: #666666;
+$text-muted: #999999;
+$white: #fff;
+$black: #000;
+
+// ============================================
+// FOOTER STYLES
+// ============================================
 .footer {
-    background-color: $color-2;
-    color: #999999;
+    background-color: $color-charcoal;
+    color: $text-muted;
     padding: 80px 0 30px;
     position: relative;
 
@@ -24,27 +45,34 @@
         width: 290px;
     }
 
-
-
-    .footer-social{
-
-        li a{
+    // ============================================
+    // FOOTER SOCIAL ICONS
+    // ============================================
+    .footer-social {
+        li a {
             width: 40px;
             height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            border: 1px solid $border-color;
+            border: 1px solid rgba($color-gold, 0.3);
+            color: $color-gold;
+            transition: all 0.3s ease;
 
-            &:hover{
-                background-color: $color-1;
+            &:hover {
+                background-color: $color-gold;
                 color: white;
+                border-color: $color-gold;
+                transform: translateY(-3px);
+                box-shadow: 0 4px 12px rgba($color-gold, 0.3);
             }
         }
     }
 
-
+    // ============================================
+    // FOOTER BRAND
+    // ============================================
     .footer-brand {
         .logo {
             text-decoration: none;
@@ -67,18 +95,22 @@
 
         .contact-info {
             a {
-                color: $color-1;
+                color: $color-gold;
                 text-decoration: none;
+                transition: all 0.3s ease;
 
                 &:hover {
                     text-decoration: underline;
+                    color: lighten($color-gold, 10%);
                 }
             }
         }
-
     }
 
-    .footer-menus{
+    // ============================================
+    // FOOTER MENUS
+    // ============================================
+    .footer-menus {
         h4 {
             color: #ffffff;
             font-size: 16px;
@@ -95,27 +127,29 @@
                 margin-bottom: 12px;
 
                 a {
-                    color: #999999;
+                    color: $text-muted;
                     text-decoration: none;
                     font-size: 14px;
                     transition: color 0.3s ease;
 
                     &:hover {
-                        color: $color-1;
+                        color: $color-gold;
                     }
                 }
             }
         }
     }
 
-
+    // ============================================
+    // FOOTER BOTTOM
+    // ============================================
     .footer-bottom {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba($color-gold, 0.15);
         padding-top: 30px;
 
         .copyright {
             font-size: 14px;
-            color: #999999;
+            color: $text-muted;
         }
 
         .payment-methods {
@@ -135,44 +169,45 @@
     }
 }
 
-
+// ============================================
+// FOOTER RESPONSIVE DESIGN
+// ============================================
 @media (max-width: 991px) {
     .footer-bottom {
         margin-bottom: 3rem;
     }
 
-    .footer-brand{
+    .footer-brand {
         text-align: center;
 
-        p{
+        p {
             margin: auto;
         }
     }
 }
 
-
 @media (max-width: 768px) {
     .footer-bottom {
-        .payment-methods{
+        .payment-methods {
             justify-content: center;
         }
 
-        p{
+        p {
             text-align: center;
         }
     }
 }
 
-
-
-
+// ============================================
+// FOOTER MOBILE NAVIGATION
+// ============================================
 .footer-mobile-nav {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #fff;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
 
     &__wrapper {
@@ -185,17 +220,42 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: #666;
+        color: $text-color;
         text-decoration: none;
         font-size: 12px;
         padding: 10px 0;
+        transition: all 0.3s ease;
+
         i {
             font-size: 20px;
             margin-bottom: 2px;
         }
 
         &:hover {
-            color: $color-1;
+            color: $color-gold;
+
+            i {
+                color: $color-gold;
+            }
         }
     }
+}
+
+// ============================================
+// ADDITIONAL UTILITY STYLES
+// ============================================
+.footer-accent {
+    color: $color-gold !important;
+}
+
+.footer-link-gold {
+    color: $color-gold !important;
+
+    &:hover {
+        color: lighten($color-gold, 10%) !important;
+    }
+}
+
+.footer-divider {
+    border-color: rgba($color-gold, 0.15) !important;
 }

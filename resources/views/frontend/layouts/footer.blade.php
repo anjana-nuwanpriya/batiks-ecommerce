@@ -6,7 +6,7 @@
             <div class="col-lg-4 mb-4 mb-lg-0">
                 <div class="footer-brand">
                     <a href="{{ route('home') }}" class="logo">
-                        <img src="{{ asset('assets/logo/nv_logo.svg') }}" class="img-fluid" width="220"
+                        <img src="{{ asset('assets/logo/nvlogo2.svg') }}" class="img-fluid" width="220"
                             alt="{{ env('APP_NAME') }}">
                     </a>
                     <p class="mt-3 w-75">Your trusted partner for high-quality products. We offer a curated selection of

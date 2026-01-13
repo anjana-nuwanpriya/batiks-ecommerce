@@ -48,7 +48,8 @@
         "files": [
             "app/Helpers/Helper.php",
             "app/Helpers/Common.php",
-            "app/Helpers/CourierStubs.php"
+            "app/Helpers/CourierStubs.php",
+            "app/Helpers/CartHelper.php"
         ]
     },
     "autoload-dev": {

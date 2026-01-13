@@ -1,9 +1,22 @@
+// 👑 LUXURY BATIK COLOR PALETTE
+$color-charcoal: #1C1C1C;
+$color-ivory: #FAF7F2;
+$color-gold: #D4AF37;
+$color-maroon: #5A1A1A;
+$color-dark-maroon: #3B0F0F;
+
+// Legacy variable mappings for compatibility
+$color-1: $color-gold;
+$color-1-dark: #A68C2E;
+$color-1-light: #E5C158;
+$color-2: $color-maroon;
+
 header{
     display: initial;
 }
 
 .top-bar{
-    background-color: $color-1;
+    background-color: $color-charcoal;
     position: relative; /* or fixed if it's meant to always stay */
 
     .contact-info{
@@ -18,7 +31,7 @@ header{
             }
 
             &:hover{
-                color: black;
+                color: $color-gold;
             }
         }
     }
@@ -31,13 +44,13 @@ header{
                 margin-right: 5px;
             }
             a:hover{
-                color: black !important;
+                color: $color-gold !important;
             }
         }
 
         .auth-links-item-dropdown{
             a:hover{
-                color: black !important;
+                color: $color-gold !important;
             }
         }
 
@@ -53,7 +66,7 @@ header{
                 color: black;
 
                 &:hover{
-                    background-color: $color-1;
+                    background-color: $color-gold;
                     color: white !important;
                 }
             }
@@ -112,9 +125,9 @@ header{
                     }
 
                     &.active {
-                        background: white;
-                        color: $color-1;
-                        border-color: white;
+                        background: $color-gold;
+                        color: $color-charcoal;
+                        border-color: $color-gold;
                         font-weight: 600;
                         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 
@@ -126,12 +139,12 @@ header{
                             transform: translateX(-50%);
                             width: 6px;
                             height: 6px;
-                            background: $color-1;
+                            background: $color-charcoal;
                             border-radius: 50%;
                         }
 
                         &:hover {
-                            background: rgba(255, 255, 255, 0.95);
+                            background: rgba(212, 175, 55, 0.95);
                             transform: translateY(-1px);
                         }
                     }
@@ -221,7 +234,7 @@ header{
                 height: 1rem;
             }
             &:hover{
-                color: $color-2;
+                color: $color-gold;
             }
         }
     }
@@ -245,7 +258,7 @@ header{
             white-space: nowrap;
 
             &:hover {
-                color: $color-1-dark; // Add hover effect
+                color: $color-gold;
             }
         }
 
@@ -269,7 +282,7 @@ header{
 
                     &:hover {
                         background-color: #f8f9fa; // Light grey hover
-                        color: $color-1;
+                        color: $color-gold;
                     }
                 }
             }
@@ -310,7 +323,7 @@ header{
                 width: 0;
                 right: 0;
                 bottom: 0;
-                border-bottom: 2px solid $color-1;
+                border-bottom: 2px solid $color-gold;
                 z-index: 3;
                 -webkit-transition: width .5s cubic-bezier(.25,.8,.25,1) 0s;
                 -moz-transition: width .5s cubic-bezier(.25, .8, .25, 1) 0s;
@@ -322,7 +335,7 @@ header{
             }
 
             &:hover, &.active{
-                color: $color-1;
+                color: $color-gold;
                 &::after{
                     width: 100%;
                     left: 0;
@@ -345,7 +358,7 @@ header{
             }
 
             &:hover{
-                color: $color-1;
+                color: $color-gold;
             }
         }
 
@@ -358,7 +371,7 @@ header{
             }
 
             &:hover {
-                color: $color-1;
+                color: $color-gold;
             }
 
             .dropdown-menu {
@@ -383,7 +396,7 @@ header{
                 transition: background-color 0.3s;
 
                 &:hover{
-                    background-color: $color-1;
+                    background-color: $color-gold;
                     color: white;
                 }
             }
@@ -393,7 +406,7 @@ header{
             position: absolute;
             top: -1px;
             right: -1px;
-            background-color: $color-1;
+            background-color: $color-gold;
             font-size: 14px;
             padding: 5px;
             border-radius: 100%;
@@ -416,7 +429,7 @@ header{
     }
 
     &__qt-modal{
-        background-color: $color-1-dark;
+        background-color: $color-dark-maroon;
         border: none;
         padding: 0.5rem 1rem;
         color: white;
@@ -426,7 +439,7 @@ header{
         border-radius: 5px;
 
         &:hover{
-            background-color: $color-1-light;
+            background-color: $color-maroon;
         }
     }
 
@@ -519,7 +532,7 @@ header{
                 border-radius: 6px;
 
                 &:hover {
-                    background-color: rgba($color-1, 0.1);
+                    background-color: rgba($color-gold, 0.1);
                 }
 
                 &::after {
@@ -580,7 +593,7 @@ header{
         }
 
         &:hover{
-           color: $color-1;
+           color: $color-gold;
         }
     }
 
@@ -606,7 +619,7 @@ header{
     .mobile-nav__link:hover,
     .mobile-nav__link.active {
         background-color: #f8f9fa;
-        color: $color-1;
+        color: $color-gold;
     }
 
     .mobile-nav__link i {

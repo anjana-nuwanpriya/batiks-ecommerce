@@ -1,15 +1,31 @@
-// Tracking Page Styles - Brand Color Override
+// 👑 LUXURY BATIK COLOR PALETTE
+$color-charcoal: #1C1C1C;
+$color-ivory: #FAF7F2;
+$color-gold: #D4AF37;
+$color-maroon: #5A1A1A;
+$color-dark-maroon: #3B0F0F;
+
+// Legacy variable mappings for compatibility
+$color-1: $color-gold;
+
+// ============================================
+// TRACKING PAGE STYLES - LUXURY BATIK OVERRIDE
+// ============================================
 :root {
-    --tracking-primary: $color-1;
-    --tracking-primary-rgb: 0, 102, 75;
-    --tracking-primary-light: rgba(0, 102, 75, 0.1);
-    --tracking-primary-border: rgba(0, 102, 75, 0.2);
+    --tracking-primary: $color-gold;
+    --tracking-primary-rgb: 212, 175, 55;
+    --tracking-primary-light: rgba(212, 175, 55, 0.1);
+    --tracking-primary-border: rgba(212, 175, 55, 0.2);
 }
 
+// ============================================
+// TRACKING FORM
+// ============================================
 .tracking-form {
     .form-control:focus {
         border-color: var(--tracking-primary);
         box-shadow: 0 0 0 0.2rem rgba(var(--tracking-primary-rgb), 0.25);
+        outline: none;
     }
 
     @media (max-width: 768px) {
@@ -19,7 +35,9 @@
     }
 }
 
-// Tracking Timeline Styles
+// ============================================
+// TRACKING TIMELINE STYLES
+// ============================================
 .tracking-timeline {
     position: relative;
 
@@ -34,12 +52,12 @@
 
         &.active {
             .timeline-dot {
-                background-color: $color-1 !important;
-                box-shadow: 0 0 0 2px $color-1 !important;
+                background-color: $color-gold !important;
+                box-shadow: 0 0 0 2px $color-gold !important;
             }
 
             .timeline-content h6 {
-                color: $color-1;
+                color: $color-gold;
             }
         }
     }
@@ -89,7 +107,9 @@
     }
 }
 
-// Loading Animation
+// ============================================
+// LOADING ANIMATION
+// ============================================
 .loading {
     opacity: 0.6;
     pointer-events: none;
@@ -113,7 +133,9 @@
     }
 }
 
-// Status Cards
+// ============================================
+// STATUS CARDS
+// ============================================
 .status-card {
     border: none;
     border-radius: 1rem;
@@ -156,7 +178,9 @@
     }
 }
 
-// Responsive Improvements
+// ============================================
+// RESPONSIVE IMPROVEMENTS
+// ============================================
 @media (max-width: 768px) {
     .d-flex.gap-2.flex-wrap {
         flex-direction: column;
@@ -187,7 +211,9 @@
     }
 }
 
-// Order Status Progress Bar (for existing order view)
+// ============================================
+// ORDER STATUS PROGRESS BAR
+// ============================================
 .order-status {
     position: relative;
 
@@ -258,7 +284,9 @@
     }
 }
 
-// Waybill Display
+// ============================================
+// WAYBILL DISPLAY
+// ============================================
 .waybill-display {
     background: linear-gradient(135deg, var(--tracking-primary-light), rgba(var(--tracking-primary-rgb), 0.05));
     border: 1px solid var(--tracking-primary-border);
@@ -277,7 +305,9 @@
     }
 }
 
-// Quick Action Buttons
+// ============================================
+// QUICK ACTION BUTTONS
+// ============================================
 .quick-actions {
     .btn {
         border-radius: 2rem;
@@ -292,7 +322,9 @@
     }
 }
 
-// Help Section
+// ============================================
+// HELP SECTION
+// ============================================
 .help-section {
     .help-item {
         text-align: center;
@@ -320,7 +352,9 @@
     }
 }
 
-// Enhanced Status Details
+// ============================================
+// ENHANCED STATUS DETAILS
+// ============================================
 .status-details {
     .badge {
         font-size: 0.75rem;
@@ -357,7 +391,9 @@
     }
 }
 
-// Date/Time Styling
+// ============================================
+// DATE/TIME STYLING
+// ============================================
 .timeline-content {
     .text-success {
         .las {
@@ -366,11 +402,13 @@
     }
 
     .text-primary {
-        color: $color-1;
+        color: $color-gold;
     }
 }
 
-// Current Status Card Enhancement
+// ============================================
+// CURRENT STATUS CARD ENHANCEMENT
+// ============================================
 .current-status-card {
     background: linear-gradient(135deg, var(--tracking-primary-light), rgba(var(--tracking-primary-rgb), 0.02));
     border: 1px solid var(--tracking-primary-border);
@@ -389,7 +427,9 @@
     }
 }
 
-// Branch Name Badge Styling
+// ============================================
+// BRANCH NAME BADGE STYLING
+// ============================================
 .badge.bg-primary.bg-opacity-10 {
     background-color: var(--tracking-primary-light) !important;
     color: var(--tracking-primary) !important;
@@ -404,7 +444,9 @@
     }
 }
 
-// Enhanced Timeline Item Active State
+// ============================================
+// ENHANCED TIMELINE ITEM ACTIVE STATE
+// ============================================
 .timeline-item.active {
     .timeline-content {
         h6.text-primary {
@@ -434,7 +476,9 @@
     }
 }
 
-// Responsive enhancements for status details
+// ============================================
+// RESPONSIVE ENHANCEMENTS FOR STATUS DETAILS
+// ============================================
 @media (max-width: 768px) {
     .status-details {
         .badge {
@@ -457,16 +501,18 @@
     }
 }
 
-// Tracking Form Submit Button
+// ============================================
+// TRACKING FORM SUBMIT BUTTON
+// ============================================
 .tracking-form .btn-primary {
-    background: $color-1;
+    background: $color-gold;
     border: none !important;
     padding: 0.5rem 2rem;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
 
     &:hover {
-        background: linear-gradient(135deg, #004d38, #003d2b) !important;
+        background: darken($color-gold, 15%) !important;
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(var(--tracking-primary-rgb), 0.4);
     }
@@ -476,20 +522,24 @@
     }
 }
 
-// Order History Track Buttons
+// ============================================
+// ORDER HISTORY TRACK BUTTONS
+// ============================================
 .btn-sm.btn-primary {
-    background-color: $color-1;
-    border-color:  $color-1;
+    background-color: $color-gold;
+    border-color: $color-gold;
     padding: 0.375rem 0.75rem;
     font-size: 0.875rem;
 
     &:hover {
-        background-color: #004d38 !important;
-        border-color: #004d38 !important;
+        background-color: darken($color-gold, 15%) !important;
+        border-color: darken($color-gold, 15%) !important;
     }
 }
 
-// Refresh Button Styling
+// ============================================
+// REFRESH BUTTON STYLING
+// ============================================
 button[data-action="refresh-tracking"] {
     color: var(--tracking-primary) !important;
     border-color: var(--tracking-primary) !important;
@@ -508,7 +558,9 @@ button[data-action="refresh-tracking"] {
     }
 }
 
-// Quick Access Buttons
+// ============================================
+// QUICK ACCESS BUTTONS
+// ============================================
 .quick-actions .btn-outline-primary,
 .quick-actions .btn-primary {
     border-radius: 2rem;
@@ -532,18 +584,22 @@ button[data-action="refresh-tracking"] {
     }
 }
 
-// Contact Support Button
+// ============================================
+// CONTACT SUPPORT BUTTON
+// ============================================
 .btn[href*="contact"] {
     background-color: var(--tracking-primary) !important;
     border-color: var(--tracking-primary) !important;
 
     &:hover {
-        background-color: #004d38 !important;
-        border-color: #004d38 !important;
+        background-color: darken($color-gold, 15%) !important;
+        border-color: darken($color-gold, 15%) !important;
     }
 }
 
-// Loading State for Buttons
+// ============================================
+// LOADING STATE FOR BUTTONS
+// ============================================
 .btn-primary.loading {
     background-color: rgba(var(--tracking-primary-rgb), 0.7) !important;
     pointer-events: none;
@@ -571,9 +627,10 @@ button[data-action="refresh-tracking"] {
     }
 }
 
-// Mobile Button Adjustments
+// ============================================
+// MOBILE BUTTON ADJUSTMENTS
+// ============================================
 @media (max-width: 768px) {
-
     .btn-primary,
     .btn-outline-primary {
         padding: 0.75rem 1.5rem;
@@ -592,18 +649,20 @@ button[data-action="refresh-tracking"] {
     }
 }
 
-// Global Button Override for Tracking Pages
+// ============================================
+// GLOBAL BUTTON OVERRIDE FOR TRACKING PAGES
+// ============================================
 body[class*="tracking"],
 .tracking-page,
 .page-tracking {
     .btn-primary {
         --bs-btn-bg: var(--tracking-primary) !important;
         --bs-btn-border-color: var(--tracking-primary) !important;
-        --bs-btn-hover-bg: #004d38 !important;
-        --bs-btn-hover-border-color: #004d38 !important;
+        --bs-btn-hover-bg: darken($color-gold, 15%) !important;
+        --bs-btn-hover-border-color: darken($color-gold, 15%) !important;
         --bs-btn-focus-shadow-rgb: var(--tracking-primary-rgb) !important;
-        --bs-btn-active-bg: #004d38 !important;
-        --bs-btn-active-border-color: #004d38 !important;
+        --bs-btn-active-bg: darken($color-gold, 15%) !important;
+        --bs-btn-active-border-color: darken($color-gold, 15%) !important;
     }
 
     .btn-outline-primary {
@@ -617,7 +676,9 @@ body[class*="tracking"],
     }
 }
 
-// Specific Page Targeting
+// ============================================
+// SPECIFIC PAGE TARGETING
+// ============================================
 [data-page="tracking"],
 .frontend-tracking-index,
 .frontend-tracking-show {
@@ -628,8 +689,8 @@ body[class*="tracking"],
         &:hover,
         &:focus,
         &:active {
-            background-color: #004d38 !important;
-            border-color: #004d38 !important;
+            background-color: darken($color-gold, 15%) !important;
+            border-color: darken($color-gold, 15%) !important;
         }
     }
 
@@ -647,39 +708,45 @@ body[class*="tracking"],
     }
 }
 
-// Order History Page Button Override
+// ============================================
+// ORDER HISTORY PAGE BUTTON OVERRIDE
+// ============================================
 .frontend-customer-order-history {
     .btn-primary {
         background-color: var(--tracking-primary) !important;
         border-color: var(--tracking-primary) !important;
 
         &:hover {
-            background-color: #004d38 !important;
-            border-color: #004d38 !important;
+            background-color: darken($color-gold, 15%) !important;
+            border-color: darken($color-gold, 15%) !important;
         }
     }
 }
 
-// Order Details Page Button Override
+// ============================================
+// ORDER DETAILS PAGE BUTTON OVERRIDE
+// ============================================
 .frontend-customer-order {
     .btn-primary {
         background-color: var(--tracking-primary) !important;
         border-color: var(--tracking-primary) !important;
 
         &:hover {
-            background-color: #004d38 !important;
-            border-color: #004d38 !important;
+            background-color: darken($color-gold, 15%) !important;
+            border-color: darken($color-gold, 15%) !important;
         }
     }
 }
 
-// Navigation Track Order Button
+// ============================================
+// NAVIGATION TRACK ORDER BUTTON
+// ============================================
 .navbar .nav-link[href*="track-order"],
 .mobile-nav .mobile-nav__link[href*="track-order"] {
     color: var(--tracking-primary) !important;
 
     &:hover {
-        color: #004d38 !important;
+        color: darken($color-gold, 15%) !important;
     }
 
     &.active {
@@ -688,7 +755,9 @@ body[class*="tracking"],
     }
 }
 
-// Enhanced Button Animations
+// ============================================
+// ENHANCED BUTTON ANIMATIONS
+// ============================================
 .btn-primary,
 .btn-outline-primary {
     position: relative;
@@ -710,15 +779,18 @@ body[class*="tracking"],
     }
 }
 
-// Button Focus States
+// ============================================
+// BUTTON FOCUS STATES
+// ============================================
 .btn:focus {
     outline: 2px solid var(--tracking-primary) !important;
     outline-offset: 2px;
 }
 
-// Print Styles
+// ============================================
+// PRINT STYLES
+// ============================================
 @media print {
-
     .btn-primary,
     .btn-outline-primary {
         background-color: var(--tracking-primary) !important;

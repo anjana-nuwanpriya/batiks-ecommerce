@@ -1,3 +1,21 @@
+// 👑 LUXURY BATIK COLOR PALETTE
+$color-charcoal: #1C1C1C;
+$color-ivory: #FAF7F2;
+$color-gold: #D4AF37;
+$color-maroon: #5A1A1A;
+$color-dark-maroon: #3B0F0F;
+
+// Legacy variable mappings for compatibility
+$color-1: $color-gold;
+$color-1-dark: #A68C2E;
+$color-1-light: #E5C158;
+
+// Theme variables
+$border-color: #E6E6E6;
+$text-color: #666666;
+$text-muted: #6c757d;
+$white: #fff;
+
 .product-detail {
     padding: 3rem 0;
 
@@ -28,7 +46,7 @@
                 cursor: pointer;
 
                 &.active {
-                    border-color: $color-1;
+                    border-color: $color-gold;
                 }
 
                 img {
@@ -92,11 +110,11 @@
             .current-price {
                 font-size: 1.5rem;
                 font-weight: 600;
-                color: $color-1;
+                color: $color-gold;
             }
 
             .discount {
-                color: $color-1;
+                color: $color-gold;
                 font-size: 0.875rem;
                 margin-left: 0.5rem;
             }
@@ -217,7 +235,7 @@
                         text-decoration: none;
 
                         &:hover {
-                            color: $color-1;
+                            color: $color-gold;
                         }
                     }
                 }
@@ -242,7 +260,7 @@
                 }
 
                 &:has(input[type="radio"]:checked) label {
-                    border-color: $color-1;
+                    border-color: $color-gold;
                 }
             }
 
@@ -261,15 +279,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #33a88229;
+            background-color: rgba($color-gold, 0.15);
             svg{
                 width: 20px;
                 height: 20px;
-                color: $color-1;
+                color: $color-gold;
             }
 
             &:hover{
-                background-color: $color-1;
+                background-color: $color-gold;
                 svg{
                     color: $white;
                     fill: $white;
@@ -279,7 +297,7 @@
             }
 
             &.active{
-                background-color: $color-1;
+                background-color: $color-gold;
                 svg{
                     color: $white;
                     fill: $white;
@@ -288,12 +306,12 @@
         }
 
         .btn-request{
-            border: 1px solid $color-1;
-            color: $color-1;
+            border: 1px solid $color-gold;
+            color: $color-gold;
             padding: 5px 24px;
 
             &:hover{
-                background-color: $color-1;
+                background-color: $color-gold;
                 color: white;
             }
         }
@@ -310,8 +328,8 @@
             font-weight: 500;
 
             &.active {
-                color: $color-1;
-                border-bottom: 2px solid $color-1;
+                color: $color-gold;
+                border-bottom: 2px solid $color-gold;
             }
         }
     }
@@ -327,7 +345,7 @@
                 margin-bottom: 1rem;
 
                 i {
-                    color: $color-1;
+                    color: $color-gold;
                     font-size: 1.25rem;
                 }
             }
@@ -415,7 +433,7 @@
     // Price range slider customization
     .form-range {
         &::-webkit-slider-thumb {
-            background: #28a745;
+            background: $color-gold;
         }
 
         &::-webkit-slider-runnable-track {
@@ -425,8 +443,8 @@
 
     // Badge customization
     .badge-custom {
-        background-color: #e8f5e9;
-        color: #28a745;
+        background-color: rgba($color-gold, 0.1);
+        color: $color-gold;
         font-weight: normal;
         padding: 5px 10px;
         border-radius: 15px;
@@ -607,7 +625,7 @@
     }
 
     .progress-bar {
-        background-color: #28a745;
+        background-color: $color-gold;
         border-radius: 30px;
         transition: width 0.6s ease;
     }

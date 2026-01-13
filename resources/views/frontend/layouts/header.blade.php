@@ -161,14 +161,14 @@
                         <a class="navbar__link nav-link {{ Route::currentRouteName() == 'home' ? 'active' : '' }}"
                             href="{{ route('home') }}"> {{ __('Home') }}</a>
                     </li>
-                    <li class="navbar__item nav-item">
+                    <!-- <li class="navbar__item nav-item">
                         <a class="navbar__link nav-link {{ Route::currentRouteName() == 'about' ? 'active' : '' }}"
                             href="{{ route('about') }}">{{ __('Our Story') }}</a>
-                    </li>
+                    </li> -->
                     <li class="navbar__item nav-item dropdown">
                         <a class="navbar__link nav-link" href="{{ route('sf.products.list') }}"
                             id="productsDropdown" role="button">
-                            {{ __('All Products') }}
+                            {{ __('Collection') }}
                         </a>
                     </li>
                     <li class="navbar__item nav-item">
@@ -203,15 +203,15 @@
                         <i class="las la-home me-2"></i>{{ __('Home') }}
                     </a>
                 </li>
-                <li class="mobile-nav__item">
+                <!-- <li class="mobile-nav__item">
                     <a class="mobile-nav__link {{ Route::currentRouteName() == 'about' ? 'active' : '' }}"
                         href="{{ route('about') }}">
                         <i class="las la-info-circle me-2"></i>{{ __('Our Story') }}
                     </a>
-                </li>
+                </li> -->
                 <li class="mobile-nav__item">
                     <a class="mobile-nav__link" href="{{ route('sf.products.list') }}">
-                        <i class="las la-box me-2"></i>{{ __('All Products') }}
+                        <i class="las la-box me-2"></i>{{ __('Collection') }}
                     </a>
                 </li>
                 <li class="mobile-nav__item">

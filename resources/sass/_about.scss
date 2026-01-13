@@ -1,5 +1,30 @@
+// 👑 LUXURY BATIK COLOR PALETTE
+$color-charcoal: #1C1C1C;
+$color-ivory: #FAF7F2;
+$color-gold: #D4AF37;
+$color-maroon: #5A1A1A;
+$color-dark-maroon: #3B0F0F;
 
-// Modern About Hero Section
+// Legacy variable mappings for compatibility
+$color-1: $color-gold;
+$color-1-dark: #A68C2E;
+$color-1-light: #E5C158;
+$color-1-neutral-light: #f5f5f5;
+$color-1-neutral-dark: #2c3e50;
+$color-1-triadic-1: #8C6800;
+$color-1-hover-saturated: #B8860B;
+$color-1-shadow-transparent: rgba(212, 175, 55, 0.1);
+
+// Theme variables
+$border-color: #E6E6E6;
+$text-color: #666666;
+$text-muted: #6c757d;
+$white: #fff;
+$black: #000;
+
+// ============================================
+// MODERN ABOUT HERO SECTION
+// ============================================
 .about-hero-section {
     padding: 80px 0;
     background: linear-gradient(135deg, #f8fffe 0%, #f0f9f7 100%);
@@ -13,7 +38,7 @@
         right: -20%;
         width: 600px;
         height: 600px;
-        background: radial-gradient(circle, rgba(0, 178, 7, 0.05) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
         border-radius: 50%;
         z-index: 0;
     }
@@ -29,14 +54,14 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: rgba(0, 178, 7, 0.1);
-        color: $color-1;
+        background: rgba($color-gold, 0.1);
+        color: $color-gold;
         padding: 8px 16px;
         border-radius: 50px;
         font-size: 14px;
         font-weight: 600;
         margin-bottom: 24px;
-        border: 1px solid rgba(0, 178, 7, 0.2);
+        border: 1px solid rgba($color-gold, 0.2);
 
         i {
             font-size: 16px;
@@ -51,7 +76,7 @@
         margin-bottom: 32px;
 
         .text-highlight {
-            color: $color-1;
+            color: $color-gold;
             position: relative;
         }
 
@@ -102,7 +127,7 @@
             .stat-number {
                 font-size: 2.5rem;
                 font-weight: 700;
-                color: $color-1;
+                color: $color-gold;
                 line-height: 1;
                 margin-bottom: 8px;
 
@@ -170,8 +195,8 @@
 
             i {
                 font-size: 2rem;
-                color: $color-1;
-                background: rgba(0, 178, 7, 0.1);
+                color: $color-gold;
+                background: rgba($color-gold, 0.1);
                 padding: 12px;
                 border-radius: 50%;
                 width: 48px;
@@ -202,7 +227,9 @@
     50% { transform: translateY(-10px); }
 }
 
-// Certifications Section
+// ============================================
+// CERTIFICATIONS SECTION
+// ============================================
 .certifications-section {
     padding: 100px 0;
     background: #fff;
@@ -211,14 +238,14 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: rgba(0, 178, 7, 0.1);
-        color: $color-1;
+        background: rgba($color-gold, 0.1);
+        color: $color-gold;
         padding: 8px 16px;
         border-radius: 50px;
         font-size: 14px;
         font-weight: 600;
         margin-bottom: 16px;
-        border: 1px solid rgba(0, 178, 7, 0.2);
+        border: 1px solid rgba($color-gold, 0.2);
 
         i {
             font-size: 16px;
@@ -245,7 +272,9 @@
     }
 }
 
-// Certificate Preview Cards
+// ============================================
+// CERTIFICATE PREVIEW CARDS
+// ============================================
 .certificate-preview {
     background: white;
     border-radius: 20px;
@@ -326,12 +355,12 @@
             margin-bottom: 12px;
 
             &.iso {
-                background: linear-gradient(135deg, #e74c3c, #c0392b);
+                background: linear-gradient(135deg, #C4A227, #A68C2E);
                 color: white;
             }
 
             &.haccp {
-                background: linear-gradient(135deg, #f39c12, #e67e22);
+                background: linear-gradient(135deg, #8C6800, #B8860B);
                 color: white;
             }
         }
@@ -346,7 +375,9 @@
     }
 }
 
-// Certificate Modal Styles
+// ============================================
+// CERTIFICATE MODAL STYLES
+// ============================================
 .modal {
     .modal-content {
         border: none;
@@ -375,12 +406,12 @@
                 letter-spacing: 0.5px;
 
                 &.iso {
-                    background: linear-gradient(135deg, #e74c3c, #c0392b);
+                    background: linear-gradient(135deg, #C4A227, #A68C2E);
                     color: white;
                 }
 
                 &.haccp {
-                    background: linear-gradient(135deg, #f39c12, #e67e22);
+                    background: linear-gradient(135deg, #8C6800, #B8860B);
                     color: white;
                 }
             }
@@ -414,6 +445,9 @@
     }
 }
 
+// ============================================
+// VALUES SECTION
+// ============================================
 .values-section{
     background: var(--choose-bg) no-repeat;
 
@@ -470,7 +504,9 @@
     }
 }
 
-// Vision & Mission Section
+// ============================================
+// VISION & MISSION SECTION
+// ============================================
 .vision-mission-section {
     background: linear-gradient(135deg, $color-1-neutral-light 0%, lighten($color-1-neutral-light, 5%) 100%);
     position: relative;
@@ -483,7 +519,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23008c68" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="%23008c68" opacity="0.05"/><circle cx="50" cy="10" r="0.5" fill="%23008c68" opacity="0.05"/><circle cx="10" cy="60" r="0.5" fill="%23008c68" opacity="0.05"/><circle cx="90" cy="40" r="0.5" fill="%23008c68" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23D4AF37" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="%23D4AF37" opacity="0.05"/><circle cx="50" cy="10" r="0.5" fill="%23D4AF37" opacity="0.05"/><circle cx="10" cy="60" r="0.5" fill="%23D4AF37" opacity="0.05"/><circle cx="90" cy="40" r="0.5" fill="%23D4AF37" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
         pointer-events: none;
     }
 
@@ -594,15 +630,15 @@
     // Vision specific styles
     &.vision-card {
         .icon-wrapper {
-            background: linear-gradient(135deg, $color-1 0%, $color-1-light 100%);
+            background: linear-gradient(135deg, $color-gold 0%, $color-1-light 100%);
 
             &::after {
-                background: linear-gradient(135deg, $color-1 0%, $color-1-light 100%);
+                background: linear-gradient(135deg, $color-gold 0%, $color-1-light 100%);
             }
         }
 
         .card-header h3 {
-            background: linear-gradient(135deg, $color-1 0%, $color-1-light 100%);
+            background: linear-gradient(135deg, $color-gold 0%, $color-1-light 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -612,15 +648,15 @@
     // Mission specific styles
     &.mission-card {
         .icon-wrapper {
-            background: linear-gradient(135deg, $color-1-triadic-1 0%, $color-1-hover-saturated 100%);
+            background: linear-gradient(135deg, $color-maroon 0%, $color-dark-maroon 100%);
 
             &::after {
-                background: linear-gradient(135deg, $color-1-triadic-1 0%, $color-1-hover-saturated 100%);
+                background: linear-gradient(135deg, $color-maroon 0%, $color-dark-maroon 100%);
             }
         }
 
         .card-header h3 {
-            background: linear-gradient(135deg, $color-1-triadic-1 0%, $color-1-hover-saturated 100%);
+            background: linear-gradient(135deg, $color-maroon 0%, $color-dark-maroon 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -639,18 +675,18 @@
         align-items: center;
         gap: 0.75rem;
         padding: 0.75rem;
-        background: rgba(0, 140, 104, 0.05);
+        background: rgba($color-gold, 0.05);
         border-radius: 10px;
         transition: all 0.3s ease;
 
         &:hover {
-            background: rgba(0, 140, 104, 0.1);
+            background: rgba($color-gold, 0.1);
             transform: translateX(5px);
         }
 
         i {
             font-size: 1.2rem;
-            color: $color-1;
+            color: $color-gold;
             width: 20px;
         }
 
@@ -662,18 +698,20 @@
 }
 
 .mission-features .feature-point {
-    background: rgba(140, 104, 0, 0.05);
+    background: rgba($color-maroon, 0.05);
 
     &:hover {
-        background: rgba(140, 104, 0, 0.1);
+        background: rgba($color-maroon, 0.1);
     }
 
     i {
-        color: $color-1-triadic-1;
+        color: $color-maroon;
     }
 }
 
-// Core Values Section
+// ============================================
+// CORE VALUES SECTION
+// ============================================
 .core-values-section {
     background: white;
     border-radius: 20px;
@@ -694,7 +732,7 @@
             transform: translateX(-50%);
             width: 40px;
             height: 3px;
-            background: linear-gradient(90deg, $color-1, $color-1-light);
+            background: linear-gradient(90deg, $color-gold, $color-1-light);
             border-radius: 2px;
         }
     }
@@ -708,12 +746,12 @@
     height: 100%;
 
     &:hover {
-        background: $color-1-shadow-transparent;
+        background: rgba($color-gold, 0.1);
         transform: translateY(-5px);
 
         .value-icon {
             transform: scale(1.1);
-            background: linear-gradient(135deg, $color-1 0%, $color-1-light 100%);
+            background: linear-gradient(135deg, $color-gold 0%, $color-1-light 100%);
 
             i {
                 color: white;
@@ -725,7 +763,7 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: rgba(0, 140, 104, 0.1);
+        background: rgba($color-gold, 0.1);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -734,7 +772,7 @@
 
         i {
             font-size: 1.8rem;
-            color: $color-1;
+            color: $color-gold;
             transition: all 0.3s ease;
         }
     }
@@ -754,7 +792,9 @@
     }
 }
 
-// Responsive Design
+// ============================================
+// RESPONSIVE DESIGN
+// ============================================
 @media (max-width: 1200px) {
     .about-content {
         .about-title {
@@ -1010,12 +1050,12 @@
         }
     }
 
-    .certification-card {
-        .cert-image {
+    .certificate-preview {
+        .cert-preview-image {
             height: 180px;
         }
 
-        .cert-info {
+        .cert-preview-info {
             padding: 15px;
 
             .cert-badge {
@@ -1023,7 +1063,7 @@
                 padding: 4px 12px;
             }
 
-            h4 {
+            h5 {
                 font-size: 1.1rem;
                 margin-bottom: 12px;
             }
@@ -1031,17 +1071,6 @@
             p {
                 font-size: 0.9rem;
                 margin-bottom: 15px;
-            }
-
-            .cert-features {
-                li {
-                    font-size: 0.85rem;
-                    padding: 6px 0;
-
-                    i {
-                        font-size: 1rem;
-                    }
-                }
             }
         }
     }
@@ -1062,7 +1091,6 @@
     }
 }
 
-// Additional mobile improvements
 @media (max-width: 480px) {
     .about-content {
         .about-title {
@@ -1082,14 +1110,13 @@
         }
     }
 
-    .certification-card {
-        .cert-image {
+    .certificate-preview {
+        .cert-preview-image {
             height: 150px;
         }
     }
 }
 
-// Landscape mobile optimization
 @media (max-width: 768px) and (orientation: landscape) {
     .about-hero-section {
         padding: 20px 0;

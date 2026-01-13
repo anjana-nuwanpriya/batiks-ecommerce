@@ -39,7 +39,7 @@
     </section>
 
     <!-- Shipping Features Section -->
-    <section class="shipping-features-section">
+    <!-- <section class="shipping-features-section">
         <div class="container">
             <div class="shipping-features" data-aos="fade-up">
                 <div class="row g-3">
@@ -95,7 +95,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- About Company -->
     <section class="hb-section section-p-tb">
@@ -119,9 +119,9 @@
                             <div class="hero-description">
                                 {!! get_setting('home_hero_description') !!}
 
-                                <div class="hero-action mt-4">
+                                <!-- <div class="hero-action mt-4">
                                     <a href="{{ route('about') }}" class="btn btn-style-1 rounded-pill">Read More Our Story <i class="las la-arrow-right"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -210,7 +210,7 @@
     <section class="popular-categories">
         <div class="container">
             <div class="section-header text-center mb-4" data-aos="fade-up" data-aos-duration="800">
-                <h3 class="section-header__title">{{ __('Popular Category') }}</h3>
+                <h3 class="section-header__title">{{ __('Popular Collection') }}</h3>
                 <p class="section-header__subdesc m-auto">
                     {{ __('Discover our range of natural products to enhance your wellness journey') }}</p>
             </div>
@@ -266,7 +266,7 @@
         </section>
     @endif
 
-    <div class="featured-collections">
+    <!-- <div class="featured-collections">
         <div class="container">
             <div class="section-header mb-5">
                 <div class="section-header__content">
@@ -278,7 +278,7 @@
             </div>
 
             <div class="row g-4">
-                <!-- Herbal Wellness Card -->
+               
                 @foreach ($blogPosts as $blogPost)
                     <div class="col-md-6">
                         <div class="collection-card">
@@ -295,7 +295,7 @@
                 @endforeach
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Testimonials -->
     <section class="testimonial-section">
@@ -516,13 +516,7 @@
         }
 
         /* Links */
-        a {
-            color: var(--color-maroon) !important;
-        }
-
-        a:hover {
-            color: var(--color-gold) !important;
-        }
+    
 
         /* Utility Classes */
         .text-gold {
@@ -536,6 +530,31 @@
         .border-gold {
             border-color: var(--color-gold) !important;
         }
+
+
+
+
+
+
+        /* Force Hero Section Text to White - Add this to your existing <style> tag */
+.hero-section .carousel-caption {
+    color: white !important;
+}
+
+.hero-section .carousel-caption .carousel-title {
+    color: white !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+}
+
+.hero-section .carousel-caption span {
+    color: white !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+}
+
+.hero-section .carousel-caption p {
+    color: white !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+}
     </style>
 @endsection
 

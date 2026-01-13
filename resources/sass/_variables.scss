@@ -1,37 +1,242 @@
-// Body
-// $body-bg: #f8fafc;
-$color-1: #008c68;
-$color-1-light: #33a882;
-$color-1-dark: #00664b;
-$color-1-complementary: #8c0034;
-$color-1-analogous-light: #008c88;
-$color-1-analogous-dark: #004c8c;
-$color-1-triadic-1: #8c6800;
-$color-1-triadic-2: #68008c;
-$color-1-neutral-light: #e6f2ef;
-$color-1-neutral-dark: #1a4036;
+// 👑 LUXURY BATIK COLOR PALETTE - VARIABLES
+// ============================================
 
-$color-1-shadow: darken($color-1, 30%); // #005e45
-$color-1-shadow-transparent: rgba(0, 140, 104, 0.5); // Semi-transparent green shadow
-$color-1-shadow-neutral: rgba(26, 64, 54, 0.6); // Neutral dark green-gray
-$color-1-shadow-complementary: rgba(140, 0, 52, 0.3); // Soft magenta shadow
-$color-1-shadow-light: lighten($color-1, 20%); // #33a882
+// ============================================
+// PRIMARY COLORS
+// ============================================
+$color-1: #D4AF37;                           // Gold - Primary brand color
+$color-1-light: #E5C158;                     // Light gold
+$color-1-dark: #A68C2E;                      // Dark gold
+$color-1-complementary: #5A1A1A;             // Maroon - Complementary
+$color-1-analogous-light: #D4C537;           // Gold-yellow analogous
+$color-1-analogous-dark: #C4A227;            // Dark gold analogous
+$color-1-triadic-1: #3B0F0F;                 // Dark maroon triadic
+$color-1-triadic-2: #1C1C1C;                 // Charcoal triadic
+$color-1-neutral-light: #FAF7F2;             // Ivory neutral light
+$color-1-neutral-dark: #2C3E50;              // Dark neutral
 
-$color-1-hover-light: lighten($color-1, 15%); // #33a882
-$color-1-hover-dark: darken($color-1, 15%); // #00664b
-$color-1-hover-saturated: saturate($color-1, 20%); // #009975
-$color-1-hover-desaturated: desaturate($color-1, 20%); // #007d60
-$color-1-hover-complementary: #8c0034; // Deep magenta
-$color-1-hover-analogous: #004c8c; // Deep teal blue
+// ============================================
+// SHADOW VARIATIONS
+// ============================================
+$color-1-shadow: darken($color-1, 30%);                    // #7A6A1F - Deep dark gold
+$color-1-shadow-transparent: rgba(212, 175, 55, 0.5);     // Semi-transparent gold shadow
+$color-1-shadow-neutral: rgba(44, 62, 80, 0.6);           // Neutral dark shadow
+$color-1-shadow-complementary: rgba(90, 26, 26, 0.3);     // Soft maroon shadow
+$color-1-shadow-light: lighten($color-1, 20%);            // #E5C158 - Light gold shadow
 
+// ============================================
+// HOVER VARIATIONS
+// ============================================
+$color-1-hover-light: lighten($color-1, 15%);             // #DFB84A - Light hover
+$color-1-hover-dark: darken($color-1, 15%);               // #B89B2B - Dark hover
+$color-1-hover-saturated: saturate($color-1, 20%);        // #DEB340 - Saturated hover
+$color-1-hover-desaturated: desaturate($color-1, 20%);    // #CCAA3D - Desaturated hover
+$color-1-hover-complementary: #5A1A1A;                    // Maroon hover
+$color-1-hover-analogous: #A68C2E;                        // Dark gold analogous hover
 
-$text-color: #212529bf;
-$text-color-light: #999999;
-$text-muted: #666666;
-$color-2: #191919;
-$border-color: #808080;
+// ============================================
+// SECONDARY & NEUTRAL COLORS
+// ============================================
+$text-color: #212529bf;                      // Dark text (from original, preserved)
+$text-color-light: #999999;                  // Light gray text
+$text-muted: #666666;                        // Muted gray text
+$color-2: #1C1C1C;                           // Charcoal - Footer/dark background
+$border-color: #E6E6E6;                      // Light border color
 
-// Typography
+// ============================================
+// EXTENDED PALETTE - MAROON
+// ============================================
+$color-maroon: #5A1A1A;                      // Maroon
+$color-dark-maroon: #3B0F0F;                 // Dark maroon
+$color-maroon-light: #7A3333;                // Light maroon
+$color-maroon-hover: #4B1515;                // Maroon hover
+
+// ============================================
+// EXTENDED PALETTE - CHARCOAL
+// ============================================
+$color-charcoal: #1C1C1C;                    // Charcoal
+$color-charcoal-light: #2C2C2C;              // Light charcoal
+$color-charcoal-dark: #0A0A0A;               // Dark charcoal
+
+// ============================================
+// EXTENDED PALETTE - IVORY
+// ============================================
+$color-ivory: #FAF7F2;                       // Ivory
+$color-ivory-light: #FEFBF8;                 // Light ivory
+$color-ivory-dark: #F0EDEB;                  // Dark ivory
+
+// ============================================
+// UTILITY COLORS
+// ============================================
+$white: #ffffff;                             // White
+$black: #000000;                             // Black
+$gray: #808080;                              // Gray
+$gray-light: #CCCCCC;                        // Light gray
+$gray-dark: #333333;                         // Dark gray
+
+// ============================================
+// STATUS COLORS (PRESERVED FOR FUNCTIONALITY)
+// ============================================
+$success-color: #198754;                     // Success green (Bootstrap default)
+$warning-color: #FFC107;                     // Warning amber (Bootstrap default)
+$danger-color: #DC3545;                      // Danger red (Bootstrap default)
+$info-color: #0DCAF0;                        // Info cyan (Bootstrap default)
+
+// ============================================
+// TYPOGRAPHY
+// ============================================
 $font-family-sans-serif: 'Inter', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+// ============================================
+// ADDITIONAL SEMANTIC COLORS
+// ============================================
+// Primary variations for different contexts
+$primary: $color-1;                          // Primary (gold)
+$primary-light: $color-1-light;              // Light primary
+$primary-dark: $color-1-dark;                // Dark primary
+
+// Secondary variations
+$secondary: $color-maroon;                   // Secondary (maroon)
+$secondary-light: $color-maroon-light;       // Light secondary
+$secondary-dark: $color-dark-maroon;         // Dark secondary
+
+// Neutral variations
+$neutral-light: $color-ivory;                // Light neutral
+$neutral: $color-charcoal;                   // Neutral (charcoal)
+$neutral-dark: $color-charcoal-dark;         // Dark neutral
+
+// ============================================
+// SHADOW & DEPTH VARIABLES
+// ============================================
+$shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+$shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.2);
+
+// Gold-tinted shadows
+$shadow-gold-xs: 0 1px 2px rgba(212, 175, 55, 0.1);
+$shadow-gold-sm: 0 2px 4px rgba(212, 175, 55, 0.15);
+$shadow-gold-md: 0 4px 8px rgba(212, 175, 55, 0.2);
+$shadow-gold-lg: 0 8px 16px rgba(212, 175, 55, 0.25);
+
+// ============================================
+// SPACING VARIABLES (PRESERVED FROM ORIGINAL)
+// ============================================
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-2xl: 3rem;
+
+// ============================================
+// BORDER RADIUS VARIABLES
+// ============================================
+$border-radius-sm: 0.25rem;
+$border-radius-md: 0.5rem;
+$border-radius-lg: 1rem;
+$border-radius-xl: 1.5rem;
+$border-radius-round: 9999px;
+
+// ============================================
+// TRANSITION VARIABLES
+// ============================================
+$transition-fast: 0.15s ease-in-out;
+$transition-base: 0.3s ease-in-out;
+$transition-slow: 0.5s ease-in-out;
+
+// ============================================
+// OPACITY VARIABLES
+// ============================================
+$opacity-0: 0;
+$opacity-10: 0.1;
+$opacity-20: 0.2;
+$opacity-30: 0.3;
+$opacity-50: 0.5;
+$opacity-70: 0.7;
+$opacity-100: 1;
+
+// ============================================
+// BREAKPOINTS (PRESERVED FROM ORIGINAL)
+// ============================================
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-2xl: 1400px;
+
+// ============================================
+// Z-INDEX SCALE
+// ============================================
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+// ============================================
+// SPECIAL COMBINATIONS (FOR CONVENIENCE)
+// ============================================
+// Gold with different opacities
+$color-gold-10: rgba(212, 175, 55, 0.1);
+$color-gold-20: rgba(212, 175, 55, 0.2);
+$color-gold-30: rgba(212, 175, 55, 0.3);
+$color-gold-50: rgba(212, 175, 55, 0.5);
+
+// Maroon with different opacities
+$color-maroon-10: rgba(90, 26, 26, 0.1);
+$color-maroon-20: rgba(90, 26, 26, 0.2);
+$color-maroon-30: rgba(90, 26, 26, 0.3);
+
+// Charcoal with different opacities
+$color-charcoal-10: rgba(28, 28, 28, 0.1);
+$color-charcoal-20: rgba(28, 28, 28, 0.2);
+$color-charcoal-30: rgba(28, 28, 28, 0.3);
+
+// ============================================
+// GRADIENT COMBINATIONS
+// ============================================
+// Gold gradients
+$gradient-gold: linear-gradient(135deg, $color-1 0%, $color-1-light 100%);
+$gradient-gold-dark: linear-gradient(135deg, $color-1-dark 0%, $color-1 100%);
+$gradient-gold-light: linear-gradient(135deg, $color-1-light 0%, #F0E6D2 100%);
+
+// Maroon gradients
+$gradient-maroon: linear-gradient(135deg, $color-maroon 0%, $color-dark-maroon 100%);
+
+// Charcoal gradients
+$gradient-charcoal: linear-gradient(135deg, $color-charcoal 0%, $color-charcoal-dark 100%);
+
+// ============================================
+// DEPRECATED - MAPPED TO NEW COLORS
+// These are included for backwards compatibility
+// ============================================
+// Old green colors are now gold
+$old-color-1: $color-1;                      // Was #008c68, now #D4AF37
+$old-color-1-light: $color-1-light;          // Was #33a882, now #E5C158
+$old-color-1-dark: $color-1-dark;            // Was #00664b, now #A68C2E
+
+// Old complementary magenta now maps to maroon
+$old-color-1-complementary: $color-maroon;   // Was #8c0034, now #5A1A1A
+
+// ============================================
+// THEME SUMMARY
+// ============================================
+// PRIMARY: Gold #D4AF37 (main brand color)
+// SECONDARY: Maroon #5A1A1A (accent)
+// NEUTRAL: Charcoal #1C1C1C (dark backgrounds)
+// ACCENT: Ivory #FAF7F2 (light backgrounds)
+//
+// USAGE:
+// - Use $color-1 and variations for primary brand elements
+// - Use $color-maroon for secondary accents
+// - Use $color-charcoal for dark backgrounds (footer, etc)
+// - Use $color-ivory for light backgrounds
+// - Use $text-muted, $text-color-light for text
+// ============================================

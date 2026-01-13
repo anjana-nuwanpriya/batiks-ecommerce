@@ -1,43 +1,71 @@
-*{
+// 👑 LUXURY BATIK COLOR PALETTE
+$color-charcoal: #1C1C1C;
+$color-ivory: #FAF7F2;
+$color-gold: #D4AF37;
+$color-maroon: #5A1A1A;
+$color-dark-maroon: #3B0F0F;
+
+// Legacy variable mappings for compatibility
+$color-1: $color-gold;
+$color-1-dark: #A68C2E;
+$color-1-light: #E5C158;
+$color-1-hover-dark: #A68C2E;
+$color-1-neutral-light: #f5f5f5;
+
+// Theme variables
+$font-family-sans-serif: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+// ============================================
+// GLOBAL STYLES
+// ============================================
+* {
     font-family: $font-family-sans-serif;
 }
 
-html{
-    body{
+html {
+    body {
         scroll-behavior: smooth;
     }
 }
 
-.lab,.las{
+.lab, .las {
     font-size: 1.3rem;
 }
 
-a{
+// ============================================
+// LINK STYLES
+// ============================================
+a {
     color: inherit;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 
-    &:hover{
-        color: $color-1;
+    &:hover {
+        color: $color-gold;
     }
 }
 
+// ============================================
+// FONT SIZE UTILITIES
+// ============================================
+.font-12 { font-size: 12px; }
+.font-13 { font-size: 13px; }
+.font-14 { font-size: 14px; }
+.font-15 { font-size: 15px; }
+.font-16 { font-size: 16px; }
+.font-17 { font-size: 17px; }
+.font-18 { font-size: 18px; }
+.font-19 { font-size: 19px; }
+.font-20 { font-size: 20px; }
+.font-21 { font-size: 21px; }
+.font-22 { font-size: 22px; }
+.font-23 { font-size: 23px; }
+.font-25 { font-size: 25px; }
 
-.font-12 { font-size: 12px;}
-.font-13 { font-size: 13px;}
-.font-14 { font-size: 14px;}
-.font-15 { font-size: 15px;}
-.font-16 { font-size: 16px;}
-.font-17 { font-size: 17px;}
-.font-18 {font-size: 18px;}
-.font-19 {font-size: 19px;}
-.font-20 {font-size: 20px;}
-.font-21 {font-size: 21px;}
-.font-22 {font-size: 22px;}
-.font-23 {font-size: 23px;}
-.font-25 {font-size: 25px;}
-
-.z-index-1{ z-index: 1;}
+// ============================================
+// Z-INDEX UTILITIES
+// ============================================
+.z-index-1 { z-index: 1; }
 .z-index-2 { z-index: 2; }
 .z-index-3 { z-index: 3; }
 .z-index-4 { z-index: 4; }
@@ -48,22 +76,25 @@ a{
 .z-index-9 { z-index: 9; }
 .z-index-10 { z-index: 10; }
 
-.section-p-tb{
+// ============================================
+// SECTION PADDING UTILITIES
+// ============================================
+.section-p-tb {
     padding-top: 100px;
     padding-bottom: 100px;
 }
 
-.section-p-t{
+.section-p-t {
     padding-top: 100px;
 }
 
-.section-p-b{
+.section-p-b {
     padding-bottom: 100px;
 }
 
-/**
-Product Card */
-
+// ============================================
+// PRODUCT CARD STYLES
+// ============================================
 .product-wrapper {
     background: #fff;
     border-radius: 12px;
@@ -77,7 +108,7 @@ Product Card */
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-        border-color: #2e8555;
+        border-color: $color-gold;
 
         .product-wrapper__action--other {
             opacity: 1;
@@ -99,10 +130,6 @@ Product Card */
             aspect-ratio: 1/1;
             transition: transform 0.3s ease;
         }
-
-        // &:hover img {
-        //     transform: scale(1.1);
-        // }
     }
 
     &__content {
@@ -119,8 +146,6 @@ Product Card */
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-
-            /* Your existing styles */
             margin-bottom: 8px;
             color: #333;
         }
@@ -133,7 +158,6 @@ Product Card */
         h6 {
             font-size: 14px;
         }
-
     }
 
     .rating-st {
@@ -146,8 +170,8 @@ Product Card */
             font-size: 16px;
             margin-right: 2px;
 
-            &.active{
-                color: gold;
+            &.active {
+                color: $color-gold;
             }
         }
 
@@ -158,12 +182,12 @@ Product Card */
         }
     }
 
-    &__badge{
+    &__badge {
         position: absolute;
         top: 12px;
         right: auto;
         left: 12px;
-        background-color: #EA4B48;
+        background-color: $color-dark-maroon;
         color: white;
         padding: 4px 8px;
         border-radius: 5px;
@@ -180,12 +204,12 @@ Product Card */
         h6 {
             font-size: 18px;
             font-weight: 600;
-            color: $color-1;
+            color: $color-gold;
             margin: 0;
         }
 
         .cart-btn {
-            background-color: $color-1;
+            background-color: $color-gold;
             color: white;
             border: none;
             border-radius: 100%;
@@ -227,17 +251,17 @@ Product Card */
                 transition: all 0.3s ease;
 
                 &.active {
-                    color: #EA4B48;
+                    color: $color-dark-maroon;
 
-                    i{
+                    i {
                         font-weight: 600;
                     }
                 }
 
                 &:hover {
-                    color: #EA4B48;
+                    color: $color-dark-maroon;
 
-                    i{
+                    i {
                         font-weight: 600;
                     }
                 }
@@ -263,7 +287,7 @@ Product Card */
 
                 &:hover {
                     color: white;
-                    background-color: $color-1;
+                    background-color: $color-gold;
                 }
 
                 i {
@@ -274,21 +298,16 @@ Product Card */
     }
 }
 
-/**
-Section Header */
-
+// ============================================
+// SECTION HEADER STYLES
+// ============================================
 .section-header {
-    // max-width: 800px;
-    // margin: 0 auto;
-    // padding: 40px 20px;
-
     &__subtitle {
-        color: #008c68;
+        color: $color-gold;
         font-weight: 600;
         font-size: 14px;
         margin-bottom: 10px;
         display: block;
-
     }
 
     &__title {
@@ -304,14 +323,14 @@ Section Header */
         color: darkslategray;
         line-height: 1.6;
         max-width: 600px;
-
     }
 }
 
-/**
-Commmon button */
-.btn-style-1{
-    background: $color-1;
+// ============================================
+// COMMON BUTTON STYLES
+// ============================================
+.btn-style-1 {
+    background: $color-gold;
     color: white;
     border: none;
     border-radius: 5px;
@@ -319,16 +338,16 @@ Commmon button */
     cursor: pointer;
     transition: all 0.3s ease;
 
-    &:hover{
+    &:hover {
         background-color: $color-1-hover-dark;
         color: white;
     }
 }
 
-
-/**
-Pagebanner */
-.page-banner{
+// ============================================
+// PAGE BANNER STYLES
+// ============================================
+.page-banner {
     padding: 50px 0;
     text-align: center;
     color: white;
@@ -339,68 +358,74 @@ Pagebanner */
         font-size: 12px;
     }
 
-    &::before{
+    &::before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, rgba(0,0,0,0.9024859943977591) 0%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.9024859943977591) 0%, rgba(255, 255, 255, 0) 100%);
     }
 
-    &__breadcrumb{
+    &__breadcrumb {
         position: relative;
         z-index: 1;
     }
 
-    &__breadcrumb-link{
+    &__breadcrumb-link {
         color: white;
         transition: all 0.3s ease;
 
-        &:hover{
-            color: $color-1;
+        &:hover {
+            color: $color-gold;
         }
     }
 
-    .breadcrumb-item.active{
-        color: $color-1;
+    .breadcrumb-item.active {
+        color: $color-gold;
     }
 
-    .breadcrumb-item + .breadcrumb-item::before{
+    .breadcrumb-item + .breadcrumb-item::before {
         color: white;
     }
 }
 
-
+// ============================================
+// SWIPER CONTAINER STYLES
+// ============================================
 .swiper-container {
     display: flex;
     width: 100%;
     height: 500px;
 }
+
 .swiper-thumbs {
     width: 20%;
     height: 500px;
 }
+
 .swiper-main {
     width: 80%;
     height: 500px;
 }
+
 .swiper-slide img {
     width: 100%;
     height: auto;
     cursor: pointer;
 }
 
-/**
-Button */
-.btn-1{
-    color: $color-1;
+// ============================================
+// UTILITY BUTTON STYLES
+// ============================================
+.btn-1 {
+    color: $color-gold;
 }
 
-
-/**
-Button Loading */
+// ============================================
+// BUTTON LOADING ANIMATION
+// ============================================
 .btn-loading {
     position: relative;
     color: transparent !important;
@@ -432,69 +457,72 @@ Button Loading */
     }
 }
 
-.btn:disabled{
-    background-color: $color-1 !important;
+.btn:disabled {
+    background-color: $color-gold !important;
 }
 
-.form-control, .form-select{
+// ============================================
+// FORM STYLES
+// ============================================
+.form-control, .form-select {
     height: 40px;
     border-radius: 5px;
 }
-textarea{
+
+textarea {
     height: auto !important;
 }
 
-.form-control:focus{
+.form-control:focus {
     box-shadow: none;
-    border-color: $color-1;
+    border-color: $color-gold;
 }
 
-.form-select{
-    &:focus{
+.form-select {
+    &:focus {
         box-shadow: none;
-        border-color: $color-1;
+        border-color: $color-gold;
     }
 }
 
-.iti{
+.iti {
     width: 100% !important;
 }
 
-
-.form-check-input:checked{
-    background-color: $color-1 !important;
-    border-color: $color-1 !important;
+.form-check-input:checked {
+    background-color: $color-gold !important;
+    border-color: $color-gold !important;
 }
 
-.form-check-input:focus{
+.form-check-input:focus {
     box-shadow: none !important;
 }
 
-
-/**
-Pagination */
-.pagination{
-    .page-item{
-        .page-link{
-            color: $color-1;
-            border-color: $color-1;
+// ============================================
+// PAGINATION STYLES
+// ============================================
+.pagination {
+    .page-item {
+        .page-link {
+            color: $color-gold;
+            border-color: $color-gold;
             background-color: white;
 
-            &:hover{
-                background-color: $color-1;
+            &:hover {
+                background-color: $color-gold;
                 color: white;
             }
         }
 
-        &.active{
-            .page-link{
-                background-color: $color-1;
+        &.active {
+            .page-link {
+                background-color: $color-gold;
                 color: white;
             }
         }
 
-        &.disabled{
-            .page-link{
+        &.disabled {
+            .page-link {
                 background-color: #e9ecef;
                 color: #6c757d;
             }
@@ -502,10 +530,9 @@ Pagination */
     }
 }
 
-
-/**
-Floating WhatsApp Icon */
-
+// ============================================
+// FLOATING WHATSAPP ICON
+// ============================================
 .floating-whatsapp {
     position: fixed;
     bottom: 90px;
@@ -521,7 +548,7 @@ Floating WhatsApp Icon */
 .whatsapp-icon {
     width: 60px;
     height: 60px;
-    background: #25D366;
+    background: $color-gold;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -533,7 +560,7 @@ Floating WhatsApp Icon */
     transition: all 0.3s ease;
     animation: pulse 1.5s infinite;
 
-    i{
+    i {
         font-size: 35px;
     }
 
@@ -551,16 +578,19 @@ Floating WhatsApp Icon */
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5);
     }
     70% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        box-shadow: 0 0 0 15px rgba(212, 175, 55, 0);
     }
     100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
     }
 }
 
+// ============================================
+// GOOGLE TRANSLATE SUPPRESSION
+// ============================================
 .goog-te-banner-frame.skiptranslate {
     display: none !important;
 }
@@ -573,6 +603,6 @@ body {
     display: none;
 }
 
-.skiptranslate iframe{
+.skiptranslate iframe {
     position: static !important;
 }

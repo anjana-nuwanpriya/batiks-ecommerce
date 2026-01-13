@@ -1,47 +1,73 @@
+// 👑 LUXURY BATIK COLOR PALETTE
+$color-charcoal: #1C1C1C;
+$color-ivory: #FAF7F2;
+$color-gold: #D4AF37;
+$color-maroon: #5A1A1A;
+$color-dark-maroon: #3B0F0F;
 
+// Legacy variable mappings for compatibility
+$color-1: $color-gold;
+
+// Theme variables
 $separator-color: #dee2e6;
 $text-muted-color: #6c757d;
 $primary-color: #ffffff;
 $secondary-color: #f5f5f5;
-$text-muted-color: #6c757d;
-$separator-color: #e0e0e0;
-
-// Variables for colors
-$facebook-color: #1877f2; // Facebook blue
-$facebook-hover: #145dbf;
-$google-color: #ffffff; // Google white
-$google-hover: #f1f1f1;
-$text-dark: #444444; // Dark text for Google button
-$border-color: #dddddd; // Light border color for Google button
+$text-dark: #444444;
+$border-color: #dddddd;
 $shadow-color: rgba(0, 0, 0, 0.1);
 
+// Social media colors
+$facebook-color: #1877f2;
+$facebook-hover: #145dbf;
+$google-color: #ffffff;
+$google-hover: #f1f1f1;
+
+// ============================================
+// LOGIN WRAPPER
+// ============================================
 .login-wrapper {
     min-height: calc(100vh - 15rem);
     display: flex;
     align-items: center;
-    background-color:#008c682e;
+    background-color: rgba($color-gold, 0.05);
     padding: 2rem 0;
 
-    .login-card{
+    // ============================================
+    // LOGIN CARD
+    // ============================================
+    .login-card {
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
         padding: 2rem;
         background-color: white;
+        border-radius: 8px;
 
-        .login-subtitle{
+        .login-subtitle {
             font-size: 0.9rem;
+            color: $text-muted-color;
         }
     }
 
-    .form-group{
-        input{
+    // ============================================
+    // FORM GROUP
+    // ============================================
+    .form-group {
+        input {
             border-radius: 0;
-            &:focus{
-                border-color: $color-1;
-                box-shadow: none;
+            border: 1px solid $border-color;
+            transition: all 0.3s ease;
+
+            &:focus {
+                border-color: $color-gold;
+                box-shadow: 0 0 0 0.2rem rgba($color-gold, 0.25);
+                outline: none;
             }
         }
     }
 
+    // ============================================
+    // LOGIN SEPARATOR
+    // ============================================
     .login-separator {
         display: flex;
         align-items: center;
@@ -55,6 +81,7 @@ $shadow-color: rgba(0, 0, 0, 0.1);
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
+            color: $text-muted-color;
         }
 
         &::before,
@@ -66,7 +93,9 @@ $shadow-color: rgba(0, 0, 0, 0.1);
         }
     }
 
-    // Social Button Styling
+    // ============================================
+    // SOCIAL LOGIN BUTTONS
+    // ============================================
     .login-social {
         .btn {
             display: flex;
@@ -80,7 +109,7 @@ $shadow-color: rgba(0, 0, 0, 0.1);
             padding: 10px;
             text-decoration: none;
             box-shadow: 0 2px 4px $shadow-color;
-            transition: background-color 0.3s, box-shadow 0.3s;
+            transition: all 0.3s ease;
             width: 100%;
 
             i {
@@ -89,9 +118,11 @@ $shadow-color: rgba(0, 0, 0, 0.1);
 
             &:hover {
                 box-shadow: 0 4px 8px $shadow-color;
+                transform: translateY(-2px);
             }
         }
 
+        // Facebook Button
         .btn-facebook {
             background-color: $facebook-color;
             color: #ffffff;
@@ -102,6 +133,7 @@ $shadow-color: rgba(0, 0, 0, 0.1);
             }
         }
 
+        // Google Button
         .btn-google {
             background-color: $google-color;
             color: $text-dark;
@@ -109,27 +141,206 @@ $shadow-color: rgba(0, 0, 0, 0.1);
 
             &:hover {
                 background-color: $google-hover;
+                border-color: $color-gold;
             }
         }
     }
 
-    .nav-tabs{
+    // ============================================
+    // NAVIGATION TABS
+    // ============================================
+    .nav-tabs {
         border: none;
         gap: 1rem;
-        .nav-item{
+
+        .nav-item {
             flex: 1;
 
-            .nav-link{
+            .nav-link {
                 border-radius: 5px;
-                border-color: $color-1;
-                color: $color-1;
+                border: 2px solid transparent;
+                color: $text-muted-color;
                 width: 100%;
                 text-align: center;
+                font-weight: 500;
+                transition: all 0.3s ease;
 
-                &.active{
-                    background-color: $color-1;
-                    color: white;
+                &:hover {
+                    color: $color-gold;
+                    border-color: $color-gold;
                 }
+
+                &.active {
+                    background-color: $color-gold;
+                    color: white;
+                    border-color: $color-gold;
+                }
+            }
+        }
+    }
+}
+
+// ============================================
+// ADDITIONAL LOGIN UTILITIES
+// ============================================
+.login-title {
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.login-link {
+    color: $color-gold !important;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        color: darken($color-gold, 10%) !important;
+    }
+}
+
+.auth-error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.auth-success {
+    color: $color-gold;
+    font-weight: 500;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: 0.5rem;
+
+    a {
+        color: $color-gold;
+        text-decoration: none;
+        font-size: 0.9rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+
+    a {
+        color: $color-gold;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// ============================================
+// LOGIN BUTTON
+// ============================================
+.btn-login {
+    background-color: $color-gold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+
+    &:hover {
+        background-color: darken($color-gold, 10%);
+        box-shadow: 0 4px 12px rgba($color-gold, 0.3);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+        box-shadow: none;
+        transform: none;
+    }
+}
+
+// ============================================
+// FORM VALIDATION STYLES
+// ============================================
+.form-control {
+    &.is-invalid {
+        border-color: #dc3545;
+
+        &:focus {
+            border-color: #dc3545;
+            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+        }
+    }
+
+    &.is-valid {
+        border-color: #198754;
+
+        &:focus {
+            border-color: #198754;
+            box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+        }
+    }
+}
+
+// ============================================
+// RESPONSIVE DESIGN
+// ============================================
+@media (max-width: 768px) {
+    .login-wrapper {
+        min-height: auto;
+        padding: 2rem 0;
+
+        .login-card {
+            padding: 1.5rem;
+        }
+
+        .nav-tabs {
+            .nav-item {
+                .nav-link {
+                    font-size: 0.9rem;
+                    padding: 0.75rem;
+                }
+            }
+        }
+
+        .login-social {
+            .btn {
+                padding: 8px;
+                font-size: 14px;
+
+                i {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .login-wrapper {
+        .login-card {
+            padding: 1rem;
+        }
+
+        .login-separator {
+            span {
+                font-size: 12px;
+                padding: 0 10px;
             }
         }
     }

@@ -1,5 +1,12 @@
+// 👑 LUXURY BATIK COLOR PALETTE
+$color-charcoal: #1C1C1C;
+$color-ivory: #FAF7F2;
+$color-gold: #D4AF37;
+$color-maroon: #5A1A1A;
+$color-dark-maroon: #3B0F0F;
+
 // Variables for consistent styling
-$primary-color: #28a745;
+$primary-color: $color-gold;
 $secondary-color: #f8f9fa;
 $text-color: #666666;
 $light-gray: #e9ecef;
@@ -27,16 +34,16 @@ $light-gray: #e9ecef;
         }
 
         &:hover {
-            background-color: #EDF2EE;
-            color: $primary-color;
+            background-color: rgba($color-gold, 0.1);
+            color: $color-gold;
         }
 
         &.active {
-            background-color: #EDF2EE;
-            color: black;
+            background-color: rgba($color-gold, 0.1);
+            color: $color-gold;
 
             i {
-                color: black;
+                color: $color-gold;
             }
         }
     }
@@ -62,10 +69,10 @@ $light-gray: #e9ecef;
             }
 
             .btn-outline-primary {
-                border-color: $color-1;
-                color: $color-1;
+                border-color: $color-gold;
+                color: $color-gold;
                 &:hover {
-                    background: $color-1;
+                    background: $color-gold;
                     color: white;
                 }
             }
@@ -87,7 +94,7 @@ $light-gray: #e9ecef;
 
         .float-end {
             font-weight: bold;
-            color: $color-1;
+            color: $color-gold;
             &:hover {
                 text-decoration: underline;
             }
@@ -113,7 +120,7 @@ $light-gray: #e9ecef;
         overflow: hidden;
 
         thead {
-            background-color: $primary-color;
+            background-color: $color-gold;
             color: #fff;
 
             th {
@@ -141,12 +148,12 @@ $light-gray: #e9ecef;
                             padding: 5px 10px;
                             border-radius: 5px;
                             color: #fff;
-                            background-color: $primary-color;
+                            background-color: $color-gold;
                             text-decoration: none;
                             transition: all 0.3s;
 
                             &:hover {
-                                background-color: darken($primary-color, 10%);
+                                background-color: darken($color-gold, 10%);
                             }
                         }
                     }
@@ -194,7 +201,7 @@ $light-gray: #e9ecef;
 
 
 // _variables.scss
-$primary-color: #28a745;
+$primary-color: $color-gold;
 $secondary-color: #e0e0e0;
 $text-muted: #6c757d;
 $white: #fff;
@@ -268,8 +275,8 @@ $font-size-lg: 1.25rem;
       border: 2px solid $secondary-color;
 
       &.active {
-        border-color: $primary-color;
-        background: $primary-color;
+        border-color: $color-gold;
+        background: $color-gold;
         color: $white;
       }
 

@@ -1,10 +1,47 @@
-// Fonts
+// 👑 LUXURY BATIK THEME - MAIN APP SCSS
+// This file imports all themed SCSS modules with the Luxury Batik color palette
+
+// ============================================================================
+// LUXURY BATIK COLOR PALETTE
+// ============================================================================
+$color-charcoal: #1C1C1C;
+$color-ivory: #FAF7F2;
+$color-gold: #D4AF37;
+$color-maroon: #5A1A1A;
+$color-dark-maroon: #3B0F0F;
+
+// Legacy variable mappings for compatibility
+$color-1: $color-gold;
+$color-1-dark: #A68C2E;
+$color-1-light: #E5C158;
+$color-2: $color-maroon;
+
+// ============================================================================
+// FONTS
+// ============================================================================
 @import url('https://fonts.bunny.net/css?family=Inter');
 
-// Bootstrap
+// ============================================================================
+// BOOTSTRAP
+// ============================================================================
 @import 'bootstrap/scss/bootstrap';
 
-// Variables
+// ============================================================================
+// CUSTOM VARIABLES & UTILITIES
+// ============================================================================
+// Update primary color for Bootstrap components
+$primary: $color-gold;
+$primary-dark: #A68C2E;
+
+// Additional theme variables
+$text-color: #666666;
+$light-gray: #e9ecef;
+$secondary-color: #f8f9fa;
+$border-color: #E6E6E6;
+
+// ============================================================================
+// THEME IMPORTS
+// ============================================================================
 @import 'variables';
 @import 'common';
 @import 'header';
@@ -18,3 +55,302 @@
 @import 'cart';
 @import 'checkout';
 @import 'tracking';
+
+// ============================================================================
+// GLOBAL LUXURY BATIK THEME OVERRIDES
+// ============================================================================
+
+// Bootstrap Button Colors
+.btn-primary {
+    background-color: $color-gold;
+    border-color: $color-gold;
+    
+    &:hover, &:focus, &:active {
+        background-color: #A68C2E;
+        border-color: #A68C2E;
+    }
+}
+
+.btn-outline-primary {
+    color: $color-gold;
+    border-color: $color-gold;
+    
+    &:hover, &:focus, &:active {
+        background-color: $color-gold;
+        color: white;
+        border-color: $color-gold;
+    }
+}
+
+// Bootstrap Alert Colors
+.alert-primary {
+    background-color: rgba($color-gold, 0.1);
+    border-color: $color-gold;
+    color: $color-dark-maroon;
+}
+
+// Bootstrap Badge Colors
+.badge-primary {
+    background-color: $color-gold;
+}
+
+// Bootstrap Badge Pill
+.badge.badge-pill {
+    background-color: $color-gold;
+}
+
+// Bootstrap Progress Bar
+.progress-bar {
+    background-color: $color-gold;
+}
+
+// Bootstrap Pagination
+.pagination {
+    .page-link {
+        color: $color-gold;
+        
+        &:hover {
+            color: #fff;
+            background-color: $color-gold;
+            border-color: $color-gold;
+        }
+        
+        &.active {
+            background-color: $color-gold;
+            border-color: $color-gold;
+        }
+    }
+}
+
+// Bootstrap List Group
+.list-group-item.active {
+    background-color: $color-gold;
+    border-color: $color-gold;
+}
+
+// Bootstrap Nav Tabs
+.nav-tabs {
+    .nav-link {
+        color: $text-color;
+        
+        &:hover {
+            color: $color-gold;
+        }
+        
+        &.active {
+            color: $color-gold;
+            border-bottom-color: $color-gold;
+        }
+    }
+}
+
+// Bootstrap Form Controls
+.form-control:focus {
+    border-color: $color-gold;
+    box-shadow: 0 0 0 0.2rem rgba($color-gold, 0.25);
+}
+
+.form-select:focus {
+    border-color: $color-gold;
+    box-shadow: 0 0 0 0.2rem rgba($color-gold, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: $color-gold;
+    border-color: $color-gold;
+}
+
+// Bootstrap Spinner
+.spinner-border {
+    border-color: rgba($color-gold, 0.25);
+    border-right-color: $color-gold;
+}
+
+// Bootstrap Dropdown
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: $color-gold;
+}
+
+// Bootstrap Modal
+.modal-header {
+    border-bottom-color: $border-color;
+}
+
+.btn-close {
+    opacity: 0.5;
+}
+
+// Bootstrap Tooltip (if using)
+.tooltip-inner {
+    background-color: $color-charcoal;
+}
+
+// Bootstrap Popover (if using)
+.popover-header {
+    background-color: $color-gold;
+    border-bottom-color: $color-gold;
+}
+
+// ============================================================================
+// GLOBAL LINK COLORS
+// ============================================================================
+a {
+    color: $color-maroon;
+    transition: color 0.3s ease;
+    
+    &:hover {
+        color: $color-gold;
+    }
+}
+
+// ============================================================================
+// GLOBAL HEADING COLORS
+// ============================================================================
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+}
+
+// ============================================================================
+// UTILITY CLASSES
+// ============================================================================
+.text-primary {
+    color: $color-gold !important;
+}
+
+.text-gold {
+    color: $color-gold !important;
+}
+
+.text-maroon {
+    color: $color-maroon !important;
+}
+
+.text-charcoal {
+    color: $color-charcoal !important;
+}
+
+.bg-gold {
+    background-color: $color-gold !important;
+}
+
+.bg-gold-light {
+    background-color: rgba($color-gold, 0.1) !important;
+}
+
+.bg-charcoal {
+    background-color: $color-charcoal !important;
+}
+
+.bg-maroon {
+    background-color: $color-maroon !important;
+}
+
+.border-gold {
+    border-color: $color-gold !important;
+}
+
+.border-maroon {
+    border-color: $color-maroon !important;
+}
+
+// ============================================================================
+// HOVER EFFECTS
+// ============================================================================
+.hover-gold:hover {
+    color: $color-gold;
+}
+
+.hover-gold-bg:hover {
+    background-color: rgba($color-gold, 0.1);
+}
+
+// ============================================================================
+// ICON COLORS
+// ============================================================================
+i[class*="las la-"],
+i[class*="far fa-"],
+i[class*="fas fa-"] {
+    transition: color 0.3s ease;
+}
+
+a:hover i[class*="las la-"],
+a:hover i[class*="far fa-"],
+a:hover i[class*="fas fa-"] {
+    color: $color-gold;
+}
+
+// ============================================================================
+// INPUT FOCUS STATES
+// ============================================================================
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: $color-gold;
+    box-shadow: 0 0 0 0.2rem rgba($color-gold, 0.25);
+}
+
+// ============================================================================
+// CUSTOM SCROLLBAR (WebKit browsers)
+// ============================================================================
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $color-gold;
+    border-radius: 5px;
+    
+    &:hover {
+        background: #A68C2E;
+    }
+}
+
+// ============================================================================
+// TRANSITION DEFAULTS
+// ============================================================================
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button, a, input[type="submit"] {
+    transition: all 0.3s ease;
+}
+
+// ============================================================================
+// RESPONSIVE ADJUSTMENTS
+// ============================================================================
+@media (max-width: 768px) {
+    .sidebar {
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}
+
+// ============================================================================
+// PRINT STYLES (Optional)
+// ============================================================================
+@media print {
+    a {
+        color: $color-maroon;
+        text-decoration: underline;
+    }
+
+    button {
+        display: none;
+    }
+}
+
+// ============================================================================
+// END OF LUXURY BATIK THEME
+// ============================================================================
