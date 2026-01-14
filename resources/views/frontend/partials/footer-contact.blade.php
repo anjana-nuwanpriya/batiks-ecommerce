@@ -33,7 +33,7 @@
         @php
             $raw_number = get_setting('whatsapp');
             $sanitized_number = preg_replace('/\D+/', '', $raw_number);
-            $message = urlencode("Hello, I'm interested in a product from Nature's Virtue. Could you please assist me?");
+            $message = urlencode("Hello, I'm interested in a product from batiks.lk. Could you please assist me?");
             $whatsapp_url = "https://wa.me/{$sanitized_number}?text={$message}";
 
         @endphp

@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => "Nature's Virtue",
+    'title' => "batiks.lk",
     'title_prefix' => '',
     'title_postfix' => '',
 

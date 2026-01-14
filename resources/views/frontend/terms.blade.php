@@ -28,7 +28,7 @@
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#termsAccordion">
                                     <div class="accordion-body">
-                                        <p class="lead">By accessing and using Nature's Virtue website and services, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.</p>
+                                        <p class="lead">By accessing and using batiks.lk website and services, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.</p>
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#termsAccordion">
                                     <div class="accordion-body">
-                                        <p>All content on this website is the property of Nature's Virtue and is protected by intellectual property laws:</p>
+                                        <p>All content on this website is the property of batiks.lk and is protected by intellectual property laws:</p>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <ul class="list-group list-group-flush">
@@ -129,7 +129,7 @@
                                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#termsAccordion">
                                     <div class="accordion-body">
                                         <div class="alert alert-info">
-                                            <p>Nature's Virtue shall not be liable for:</p>
+                                            <p>batiks.lk shall not be liable for:</p>
                                             <ul class="mb-0">
                                                 <li>Any indirect, incidental, or consequential damages</li>
                                                 <li>Loss of profits, revenue, or data</li>

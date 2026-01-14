@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nature's Virtue Order Invoice - {{ $order->code }}</title>
+    <title>batiks.lk Order Invoice - {{ $order->code }}</title>
 </head>
 <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f5f8f5; color: #333333;">
     <table role="presentation" style="width: 100%; border-collapse: collapse;">
@@ -13,7 +13,7 @@
                     <!-- Header with Logo -->
                     <tr>
                         <td align="center" style="padding: 30px 30px 20px 30px; border-bottom: 1px solid #e0e0e0;">
-                            <img src="{{ asset('assets/logo/nv_logo.svg') }}" alt="Nature's Virtue Logo" style="max-width: 200px; height: auto;" />
+                            <img src="{{ asset('assets/logo/nv_logo.svg') }}" alt="batiks.lk Logo" style="max-width: 200px; height: auto;" />
                         </td>
                     </tr>
 
@@ -33,7 +33,7 @@
                             <p style="margin: 0 0 20px 0; font-size: 16px; line-height: 1.6;">Dear {{ $shippingData['name'] ?? 'Customer' }},</p>
                             @endif
 
-                            <p style="margin: 0 0 20px 0; font-size: 16px; line-height: 1.6;">Thank you for shopping with Nature's Virtue. Your order has been confirmed and is being processed. Please find your invoice details below:</p>
+                            <p style="margin: 0 0 20px 0; font-size: 16px; line-height: 1.6;">Thank you for shopping with batiks.lk. Your order has been confirmed and is being processed. Please find your invoice details below:</p>
                         </td>
                     </tr>
 

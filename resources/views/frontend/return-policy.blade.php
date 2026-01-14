@@ -27,7 +27,7 @@
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#returnPolicyAccordion">
                                     <div class="accordion-body">
-                                        <p class="lead">We offer a <span class="badge bg-success">30-day return policy</span> for all products purchased directly from Nature's Virtue. The return window begins from the date of delivery.</p>
+                                        <p class="lead">We offer a <span class="badge bg-success">30-day return policy</span> for all products purchased directly from batiks.lk. The return window begins from the date of delivery.</p>
                                     </div>
                                 </div>
                             </div>

@@ -47,7 +47,7 @@
                         <div class="about-image-wrapper">
                             <div class="about-image-main">
                                 <img src="{{ isset($heroSection->content['hero_image']) ? asset('storage/' . $heroSection->content['hero_image']) : asset('assets/ab1.jpg') }}"
-                                    class="img-fluid" alt="Nature's Virtue Products">
+                                    class="img-fluid" alt="batiks.lk Products">
                             </div>
                             <div class="about-image-floating">
                                 <div class="floating-card">

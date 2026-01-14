@@ -102,7 +102,7 @@
             <div class="row align-items-center align-items-md-start">
                 <div class="col-md-6 mt-4 mt-md-0 order-2 order-md-1">
                     <p class="copyright mb-0">
-                        {{ env('APP_NAME') }} © {{ date('Y') }}. All Rights Reserved | Developed by HiDiX
+                        {{ env('APP_NAME') }} © {{ date('Y') }}. All Rights Reserved | Developed ❤️ ZIP SOLUTIONS by VERTEX
                     </p>
                 </div>
                 <div class="col-md-6 order-1 order-md-2">

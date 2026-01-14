@@ -68,7 +68,7 @@ class HomeController extends Controller
     public function about()
     {
         $title = config('app.name') . ' | About Us';
-        $description = "Learn about Nature's Virtue - your trusted source for pure dehydrated foods and herbal products. Discover our commitment to quality, sustainability, and bringing nature's goodness to your table.";
+        $description = "Learn about batiks.lk - your trusted source for pure dehydrated foods and herbal products. Discover our commitment to quality, sustainability, and bringing nature's goodness to your table.";
         SEOTools::setTitle($title);
         SEOTools::setDescription($description);
         SEOTools::setCanonical(url()->current());
@@ -89,7 +89,7 @@ class HomeController extends Controller
     {
 
         $title = config('app.name') . ' | Contact Us';
-        $description = "Get in touch with Nature's Virtue. We're here to help with your inquiries about our pure dehydrated foods and herbal products. Contact our team for product information, bulk orders, or any questions.";
+        $description = "Get in touch with batiks.lk. We're here to help with your inquiries about our pure dehydrated foods and herbal products. Contact our team for product information, bulk orders, or any questions.";
 
         SEOTools::setTitle($title);
         SEOTools::setDescription($description);
@@ -187,7 +187,7 @@ class HomeController extends Controller
     public function terms()
     {
         $title = config('app.name') . ' | Terms & Conditions';
-        $description = "Read our terms and conditions for Nature's Virtue. We provide clear guidelines for our products and services. If you have any questions, please contact us.";
+        $description = "Read our terms and conditions for batiks.lk. We provide clear guidelines for our products and services. If you have any questions, please contact us.";
         SEOTools::setTitle($title);
         SEOTools::setDescription($description);
         SEOTools::setCanonical(url()->current());
@@ -203,7 +203,7 @@ class HomeController extends Controller
     public function returnPolicy()
     {
         $title = config('app.name') . ' | Return Policy';
-        $description = "Learn about our return policy for Nature's Virtue. We offer a 30-day return policy for all products. If you're not satisfied, we'll help you find a solution.";
+        $description = "Learn about our return policy for batiks.lk. We offer a 30-day return policy for all products. If you're not satisfied, we'll help you find a solution.";
         SEOTools::setTitle($title);
         SEOTools::setDescription($description);
         SEOTools::setCanonical(url()->current());
@@ -219,7 +219,7 @@ class HomeController extends Controller
     public function privacyPolicy()
     {
         $title = config('app.name') . ' | Privacy Policy';
-        $description = "Read our privacy policy for Nature's Virtue. We respect your privacy and protect your personal information. If you have any questions, please contact us.";
+        $description = "Read our privacy policy for batiks.lk. We respect your privacy and protect your personal information. If you have any questions, please contact us.";
         SEOTools::setTitle($title);
         SEOTools::setDescription($description);
         SEOTools::setCanonical(url()->current());

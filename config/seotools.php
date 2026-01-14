@@ -10,7 +10,7 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => "Nature's Virtue", // set false to total remove
+            'title'        => "batiks.lk", // set false to total remove
             'titleBefore'  => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
             'description'  => 'Nature\'s Virtue is a website that provides information about the benefits of using natural products.', // set false to total remove
             'separator'    => ' - ',

@@ -176,7 +176,7 @@ class SmsService
             $message .= "Track: https://bit.ly/4n7rRft?waybill_no={$order->waybill_no}. ";
         }
 
-        $message .= "Thank you for choosing Nature's Virtue!";
+        $message .= "Thank you for choosing batiks.lk!";
 
         return $message;
     }
@@ -207,7 +207,7 @@ class SmsService
             $message .= "Track: https://bit.ly/4n7rRft?waybill_no={$order->waybill_no}. ";
         }
 
-        $message .= "Thank you for choosing Nature's Virtue!";
+        $message .= "Thank you for choosing batiks.lk!";
 
         return $message;
     }
@@ -228,7 +228,7 @@ class SmsService
             $message .= "Track: https://bit.ly/4n7rRft?waybill_no={$order->waybill_no}. ";
         }
 
-        $message .= "Thank you for choosing Nature's Virtue! Your order is now being processed and will be on its way to you shortly. ";
+        $message .= "Thank you for choosing batiks.lk! Your order is now being processed and will be on its way to you shortly. ";
 
         return $message;
     }
